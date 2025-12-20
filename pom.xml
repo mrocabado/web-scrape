@@ -12,13 +12,25 @@
         <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <jsoup.version>1.21.2</jsoup.version>
+        <flexmark.version>0.64.8</flexmark.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vladsch.flexmark</groupId>
+            <artifactId>flexmark-all</artifactId>
+            <version>${flexmark.version}</version>
+        </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-        </plugins>
-    </build>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--        </plugins>-->
+<!--    </build>-->
 </project>
