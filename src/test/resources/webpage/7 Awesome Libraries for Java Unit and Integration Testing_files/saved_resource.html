@@ -1,0 +1,72 @@
+
+<!-- saved from url=(0012)about:srcdoc -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>
+(function() {
+  var pixelMap = {
+    'technologyadvice.com': '324276091967847',
+    'project-management.com': '282856059511527',
+    'solutions.technologyadvice.com': '482337180184642',
+    'info.technologyadvice.com': '482337180184642',
+    'pages.technologyadvice.com': '2181046825582892',
+    'pages.project-management.com': '2181046825582892',
+    'pages.esecurityplanet.com': '2181046825582892',
+    'events.dzone.com': '1157341435516850',
+    'techrepublic.com': '195238849417509',
+    'esecurityplanet.com': '850961619882103',
+    'fitsmallbusiness.com': '817028472079700',
+    'therestauranthq.com': '507526542259743',
+    'advertise.dzone.com': '1663197657848537',
+    'dzone.technologyadvice.com': '1663197657848537',
+    'channelinsider.com': '1225703305105556'
+  };
+
+  function initializePixel() {
+    var currentURL = '';
+
+    try {
+      currentURL = window.parent.location.href;
+    } catch (e) {
+      currentURL = window.location.href;
+    }
+
+    var pixelId = null;
+
+    for (var domainPart in pixelMap) {
+      if (currentURL.indexOf(domainPart) !== -1) { 
+        pixelId = pixelMap[domainPart];
+        break; 
+      }
+    }
+
+    if (pixelId && typeof pixelId === 'string') {
+      if (!window.fbq) {
+        !function(f,b,e,v,n,t,s){
+          if(f.fbq)return;n=f.fbq=function(){
+            n.callMethod ?
+            n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+          };
+          if(!f._fbq)f._fbq=n;
+          n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)
+        }(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      }
+
+      var pixels = fbq.getState && fbq.getState().pixels;
+      var pixelInitialized = pixels && pixels.some(function(pixel) {
+        return pixel.id === pixelId;
+      });
+
+      if (!pixelInitialized) {
+        fbq('init', pixelId);
+        fbq('trackCustom', 'CHEQ');
+      }
+    }
+  }
+
+  window.addEventListener('load', initializePixel);
+})();
+</script>
+</head><body></body></html>

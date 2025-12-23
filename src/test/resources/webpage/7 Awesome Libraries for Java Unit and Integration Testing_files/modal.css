@@ -1,0 +1,213 @@
+[x-cloak] {
+    display: none !important;
+}
+.alpine-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.5);
+    z-index: 11000;
+}
+.alpine-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+.alpine-modal .modal-inner {
+    background-color: white;
+    border-radius: 0.5em;
+    min-width: min(300px, 90vw);
+    max-width: min(600px, 90vw);
+    margin: auto;
+    border: 1px solid #cccccc;
+}
+.alpine-modal .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-indent: 30px;
+    padding: 0;
+    max-width: calc(100% - 30px);
+    border-bottom: unset;
+}
+.alpine-modal .modal-header .title {
+    color: var(--brand-dark-text);
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.1;
+    font-weight: 500;
+}
+.alpine-modal .modal-header .title:hover {
+    text-decoration: none;
+}
+.alpine-modal .modal-inner .btn-close {
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    opacity: 0.8;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+}
+.alpine-modal .modal-inner .btn-close:hover {
+    background-color: rgba(146, 148, 151, 0.2);
+    color: #000;
+    border-radius: 50%;
+}
+.alpine-modal .modal-inner .btn-close:after {
+    content: '\2715';
+}
+.alpine-modal .modal-content {
+    background-color: unset !important;
+    background-clip: unset !important;
+    border: unset !important;
+    border-radius: unset !important;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important;
+    outline: unset !important;
+    position: relative;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+}
+.alpine-modal .modal-content label,
+.alpine-modal .modal-content input,
+.alpine-modal .modal-content textarea {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+.alpine-modal .modal-content label:not(:first-of-type) {
+    padding-top: 10px;
+}
+.alpine-modal .has-top-border {
+    border-top: 1px solid #e5e5e5 !important;
+}
+
+.alpine-modal .modal-footer {
+    margin-top: 0;
+}
+
+.alpine-modal .btn {
+    display: inline-block;
+    margin: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.alpine-modal .btn.focus,
+.alpine-modal .btn:focus,
+.alpine-modal .btn:hover {
+    text-decoration: none;
+}
+
+.alpine-modal .btn-primary {
+    color: #fff;
+    border-color: #2e6da4;
+}
+
+.alpine-modal .btn-primary,
+.alpine-modal .btn-primary:hover {
+    background-color: var(--acc-ffffff-blue-2);
+}
+
+.alpine-modal .btn-primary:hover {
+    color: #fff;
+    filter: brightness(1.2);
+}
+
+.alpine-modal .modal-footer .btn + .btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.alpine-modal .btn-default {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.alpine-modal .btn-default:hover {
+    filter: brightness(0.8);
+}
+
+.alpine-modal #modal-loading-icon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--brand-link-color);
+}
+
+.alpine-modal .modal-content p {
+    margin: 0 0 10px;
+}
+
+.alpine-modal .dz-style.modal-inner {
+    min-width: min(365px, 90vw);
+    padding: 20px;
+}
+
+.alpine-modal .dz-style.modal-inner .title {
+    color: var(--brand-dark-text);
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.alpine-modal .dz-style.modal-inner.centered .title {
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 20px;
+}
+
+.alpine-modal .dz-style.modal-inner .modal-header {
+    justify-content: flex-start;
+    text-indent: 8px;
+    margin-top: 10px;
+}
+
+.alpine-modal .dz-style.modal-inner .modal-header:not([style*="display: none"]) + .modal-content {
+    padding-top: 0;
+}
+
+.alpine-modal .dz-style.modal-inner .modal-content {
+    border-top: unset !important;
+}
+
+.alpine-modal .dz-style.modal-inner.centered .modal-content {
+    text-align: center;
+}
+
+.alpine-modal .dz-style.modal-inner .modal-content p {
+    font-size: 16px;
+}
+
+.alpine-modal .dz-style.modal-inner .modal-footer {
+    text-align: center;
+    border-top: none;
+}
+
+.alpine-modal .dz-style.modal-inner .modal-footer .btn {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}

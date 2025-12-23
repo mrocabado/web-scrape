@@ -1,5 +1,7 @@
 package com.mindwaresrl;
 
+import com.microsoft.playwright.BrowserType;
+import com.microsoft.playwright.Playwright;
 import com.vladsch.flexmark.html2md.converter.FlexmarkHtmlConverter;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -8,6 +10,11 @@ import org.jsoup.safety.Safelist;
 public class Main {
 
     public static void main(String[] args)  {
+        htmlToMarkdown();
+        getPageTitleWithPlayWright();
+    }
+
+    private static void htmlToMarkdown() {
         // Raw HTML that may be messy or contain unsafe tags
         String rawHtml = """
             <html>
@@ -35,4 +42,26 @@ public class Main {
         System.out.println("=== MARKDOWN OUTPUT ===");
         System.out.println(markdown);
     }
+
+    private static void getPageTitleWithPlayWright() {
+        System.out.println("Getting title with Playwright");
+
+        try(var pw = Playwright.create(); var browser =  pw.chromium().launch(new BrowserType.LaunchOptions().setChannel("chromium"))) {
+            var page = browser.newPage();
+            page.navigate("https://playwright.dev/java/");
+            String title = page.title();
+            System.out.println("Page Title: " + title);
+        }
+
+        System.out.println("Getting title with Playwright");
+
+        try(var pw = Playwright.create(); var browser =  pw.chromium().launch(new BrowserType.LaunchOptions().setChannel("chromium"))) {
+            var page = browser.newPage();
+            page.navigate("http://127.0.0.1:8000/7%20Awesome%20Libraries%20for%20Java%20Unit%20and%20Integration%20Testing.html");
+            String title = page.title();
+            System.out.println("Page Title: " + title);
+        }
+     }
+
+
 }

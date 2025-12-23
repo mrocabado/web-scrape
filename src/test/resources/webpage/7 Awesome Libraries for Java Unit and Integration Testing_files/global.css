@@ -1,0 +1,26 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+a {
+  color: #29a8ff;
+}
+a:focus {
+  text-decoration: none !important;
+}
+.btn {
+  border-radius: 0;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  padding: 3px 12px;
+}
+.btn.btn-cancel {
+  color: #737981;
+}
+.btn.btn-disabled {
+  background-color: #9daab2;
+  color: white;
+}

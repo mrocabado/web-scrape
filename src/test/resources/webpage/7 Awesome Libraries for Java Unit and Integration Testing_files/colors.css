@@ -1,0 +1,135 @@
+:root {
+    --acc-ffffff-gray: #727780;
+    --acc-ffffff-blue-1: #0175E4;
+    --acc-ffffff-blue-2: #2A6DFA;
+    --acc-f5f5f6-gray: #617479;
+    --acc-f5f5f6-blue-1: #0370D5;
+
+    --brand-background-color: #f5f5f6;
+    --brand-container-color: #ffffff;
+    --brand-light-text-on-dark-bg-color: #f5f5f6;
+
+    --brand-primary-color-1: #2f3e64;
+    --brand-primary-color-2: #5f98e6;
+    --brand-primary-color-3: #3d56bf;
+
+    --brand-primary-color-1-darker: #26314d;
+    --brand-primary-color-1-lighter: #425372;
+
+    --brand-secondary-color-1: #787f8f;
+    --brand-secondary-color-2: #c0c5cc;
+    --brand-secondary-color-3: #ecedf2;
+    --brand-secondary-color-4: #000000;
+
+    --brand-gradient-1: #0073e3;
+    --brand-gradient-2: #37dcd2;
+    --brand-gradient-2-darker: #2a9f98;
+    --brand-gradient-3: #61ccff;
+
+    --brand-gray-text: #6d7b80;
+    --brand-gray-text-light: #929497;
+    --brand-dark-gray: #545454;
+    --brand-dark-text: #222635;
+    --brand-border-color: #d9dcdd;
+
+    --brand-primary-button-color: #2377fc;
+    --brand-primary-button-hover-color: var(--brand-gradient-1);
+    --brand-link-color: #29a8ff;
+    --brand-link-hover-color: #337ab7;
+
+    --body-background-color: var(--brand-background-color);
+    --body-text-color: #333333;
+
+    --link-color: var(--brand-link-color);
+    --title-color: var(--brand-dark-text);
+    --border-dash-color: var(--brand-border-color);
+    --accessibility-text-color: #4D4D4D;
+    --light-blue-text-color: var(--brand-gradient-3);
+
+    --scrollbar-thumb-color: rgba(64, 198, 251, 0.8);
+    --scrollbar-track-color: rgba(64, 198, 251, 0.05);
+
+    --lg-spotlight-type-color: var(--brand-gradient-3);
+
+    --expert-background-color: var(--brand-dark-text);
+    --expert-description-text-color: var(--brand-light-text-on-dark-bg-color);
+    --expert-border-color: var(--brand-border-color);
+
+    --pagination-block-background-color: var(--brand-background-color);
+    --pagination-block-text-color: var(--brand-gray-text);
+
+    --blank-img-background-color: var(--brand-border-color);
+
+    /* home page */
+    --home-zone-section-background-color: var(--brand-dark-text);
+    --home-zone-card-background-color: #4253727d; /* alpha variant of brand-gradient-2 */
+    --home-zone-card-title-background-color: #42537296; /* alpha variant of brand-primary-color-1-lighter */
+    --home-zone-card-item-background-color: #c0c5cce3; /* alpha variant of brand-secondary-color-2 */
+    --home-zone-card-item-hover-background-color: #c0c5ccd1; /* alpha variant of brand-secondary-color-2 */
+    --home-zone-card-item-border-color: var(--brand-primary-color-1);
+    --home-zone-card-item-text-color: var(--brand-primary-color-1);
+    --home-zone-card-article-title-color: var(--brand-gradient-3);
+    --home-zone-card-article-border-color: #516C90;
+
+    /* parent "Zone" page */
+    --zone-description-background-color: var(--brand-dark-text);
+    --function-item-background-color: #3E484F;
+    --function-item-title-color: #40C6FB;
+    --function-item-text-color: #DEE1E5;
+
+    /* header */
+    --header-resource-link-color: var(--brand-primary-color-1);
+    --header-resource-link-hover-background-color: var(--brand-primary-color-1);
+    --header-background-color: var(--brand-primary-color-1);
+    --header-background-gradient: linear-gradient(90deg, var(--brand-primary-color-1) 25%, var(--brand-gradient-2) 100%);
+    --header-menu-background-color: var(--brand-primary-color-1-lighter);
+    --header-menu-hover-background-color: var(--brand-gradient-2-darker);
+
+    --header-mobile-menu-backdrop-color: var(--brand-primary-color-1);
+    --header-mobile-menu-item-hover-background-color: var(--brand-gradient-2-darker);
+    --header-mobile-menu-zone-background-color: var(--brand-primary-color-1-darker);
+
+    --header-user-separator-border-color: #84848459; /* new header, ignore for now */
+    --post-btn-background-color: rgb(56, 160, 182); /* new header, ignore for now */
+    --post-btn-hover-background-color: #425372; /* new header, ignore for now */
+    --post-btn-caret-color: #38a0b6; /* new header, ignore for now */
+    --search-block-border-color: #c5c5c5; /* new header, ignore for now */
+    --search-block-text-color: #8e8e8e; /* new header, ignore for now */
+    --search-block-icon-color: #1a4967; /* new header, ignore for now */
+    --search-block-hover-icon-color: #507f9c; /* new header, ignore for now */
+    --user-login-background-color: #337ac3; /* new header, ignore for now */
+    --user-login-hover-background-color: #276db6; /* new header, ignore for now */
+    --user-login-icon-color: #6799cd; /* new header, ignore for now */
+    --header-right-label-color: var(--brand-primary-color-1); /* new header, ignore for now */
+    --header-right-label-emphasis-color: #5e8ddf; /* new header, ignore for now */
+    --header-right-label-hover-emphasis-color: #285aaf; /* new header, ignore for now */
+
+    --header-three-dot-menu-color: #1a4967; /* new header, ignore for now */
+    --header-dropdown-button-background-color: #3da7be; /* new header, ignore for now */
+    --header-dropdown-button-hover-background-color: #2b77bc; /* new header, ignore for now */
+    --header-dropdown-button-bg-danger: #b03d3d; /* new header, ignore for now */
+    --header-dropdown-button-hover-bg-danger: #d03232; /* new header, ignore for now */
+
+    --color-event-primary: #F13B70;
+    --color-event-primary-hover: #C4305B;
+    --color-event-background: var(--brand-dark-text);
+    --color-event-background-hover: #15171C;
+    --color-on-demand-primary: #F0634A;
+    --color-on-demand-primary-hover: #AD422F;
+
+    --color-success-light: #94C694;
+    --color-danger-light: #DD7979;
+
+    /* Colors from common.less used for angular widget upgrades -> alpine */
+    --portal-red: #F54747;
+    --portal-blue: #29A8FF;
+    --portal-green: #1BD281;
+    --portal-yellow: #F4BD25;
+    --light-gray-bg: #F1F3F2;
+
+    --small-desktop-break: 1200px;
+    --tablet-break: 1024px;
+    --phone-break: 768px;
+    --horizontal-phone-break: 480px;
+    --tiny-break: 368px;
+}

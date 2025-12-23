@@ -1,0 +1,3112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration -->
+<html lang="en" style="--mobile-announcement-separator-width: 1px; --app-height: 911px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/pixel.gif" width="1" height="1" alt="" role="presentation" style="margin-left: -9999px; position: absolute !important; bottom: 0px !important; left: 0px !important;"><img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/4" width="1" height="1" alt="" role="presentation" style="margin-left: -9999px; position: absolute !important; bottom: 0px !important; left: 0px !important;"><img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/114" width="1" height="1" alt="" role="presentation" style="margin-left: -9999px; position: absolute !important; bottom: 0px !important; left: 0px !important;"><img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/321" width="1" height="1" alt="" role="presentation" style="margin-left: -9999px; position: absolute !important; bottom: 0px !important; left: 0px !important;"><img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/318" width="1" height="1" alt="" role="presentation" style="margin-left: -9999px; position: absolute !important; bottom: 0px !important; left: 0px !important;"><img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/pixel(1).gif" width="1" height="1" alt="" role="presentation" style="margin-left: -9999px; position: absolute !important; bottom: 0px !important; left: 0px !important;"><img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/pixel(2).gif" width="1" height="1" alt="" role="presentation" style="margin-left: -9999px; position: absolute !important; bottom: 0px !important; left: 0px !important;"><img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/pixel(3).gif" width="1" height="1" alt="" role="presentation" style="margin-left: -9999px; position: absolute !important; bottom: 0px !important; left: 0px !important;"><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/did-0060.min.js.descarga"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/up_loader.1.1.0.js.descarga" async=""></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/data.js.descarga" async=""></script><script type="text/javascript" async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/formcomplete.js.descarga"></script><script type="text/javascript" async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/destination"></script><script async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/clarity.js.descarga"></script>
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Want to improve your Java unit and integration tests? Here are seven libraries that you might find useful in your day-to-day work.">
+  <meta name="keywords" content="Integration testing, Library, java, unit test, integration">
+
+  <meta property="og:description" content="Want to improve your Java unit and integration tests? Here are seven libraries that you might find useful in your day-to-day work.">
+  <meta property="og:site_name" content="dzone.com">
+  <meta property="og:title" content="7 Awesome Libraries for Java Unit and Integration Testing">
+  <meta property="og:url" content="https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration">
+  <meta property="og:image" content="https://dz2cdn1.dzone.com/storage/article-thumb/16636966-thumb.jpg">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:site" content="@DZoneInc">
+  <meta name="twitter:image" content="https://dz2cdn1.dzone.com/storage/article-thumb/16636966-thumb.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="Want to improve your Java unit and integration tests? Here are seven libraries that you might find useful in your day-to-day work.">
+  <meta name="twitter:title" content="7 Awesome Libraries for Java Unit and Integration Testing">
+
+
+
+  <meta name="referrer" content="origin-when-cross-origin">
+  <meta name="google-site-verification" content="kndbhxcupfEqWmZclhCpB6vlgOs7QSmx2UHAGGnP2mA">
+  <meta name="df-verify" content="df0d76632b4543">
+
+  <link rel="icon" type="image/x-icon" href="https://dz2cdn1.dzone.com/themes/dz20/images/favicon.png">
+  <link rel="image_src" href="https://dz2cdn1.dzone.com/storage/article-thumb/16636966-thumb.jpg">
+  <link rel="canonical" href="https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration">
+
+  <title>7 Awesome Libraries for Java Unit and Integration Testing</title>
+
+  <link rel="preload" href="https://dz2cdn1.dzone.com/themes/dz20/font/fontello.woff?11773374" as="font" type="font/woff" crossorigin="anonymous">
+
+  <link rel="stylesheet" media="all" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/icons.css">
+  <link rel="stylesheet" media="all" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/bootstrap.min.css">
+  <link rel="stylesheet" media="all" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/global.css">
+  <link rel="stylesheet" media="all" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/styles.css">
+<style>
+    :root {
+	    --xs-size: 2px;
+        --sm-size: 5px;
+        --md-size: 10px;
+        --lg-size: 15px;
+        --xl-size: 25px;
+        --sm-border-size: 8px;
+        --sm-font-size: 13px;
+        --sm-plus-font-size: 16px;
+        --md-font-size: 18px;
+        --lg-font-size: 22px;
+        --xl-font-size: 26px;
+    }
+
+    /* Display Quick-Access Classes */
+    .display-none { display: none; }
+    .display-block { display: block; }
+    .display-inline { display: inline; }
+    .display-inline-block { display: inline-block; }
+
+    /* Margin Quick-Access Classes */
+    .m-xs { margin: var(--xs-size); }
+    .m-sm { margin: var(--sm-size); }
+    .m-md { margin: var(--md-size); }
+    .m-lg { margin: var(--lg-size); }
+    .m-xl { margin: var(--xl-size); }
+
+    .mt-xs, .my-xs { margin-top: var(--xs-size); }
+    .mr-xs, .mx-xs { margin-right: var(--xs-size); }
+    .mb-xs, .my-xs { margin-bottom: var(--xs-size); }
+    .ml-xs, .mx-xs { margin-left: var(--xs-size); }
+
+    .mt-sm, .my-sm { margin-top: var(--sm-size); }
+    .mr-sm, .mx-sm { margin-right: var(--sm-size); }
+    .mb-sm, .my-sm { margin-bottom: var(--sm-size); }
+    .ml-sm, .mx-sm { margin-left: var(--sm-size); }
+
+    .mt-md, .my-md { margin-top: var(--md-size); }
+    .mr-md, .mx-md { margin-right: var(--md-size); }
+    .mb-md, .my-md { margin-bottom: var(--md-size); }
+    .ml-md, .mx-md { margin-left: var(--md-size); }
+
+    .mt-lg, .my-lg { margin-top: var(--lg-size); }
+    .mr-lg, .mx-lg { margin-right: var(--lg-size); }
+    .mb-lg, .my-lg { margin-bottom: var(--lg-size); }
+    .ml-lg, .mx-lg { margin-left: var(--lg-size); }
+
+    .mt-xl, .my-xl { margin-top: var(--xl-size); }
+    .mr-xl, .mx-xl { margin-right: var(--xl-size); }
+    .mb-xl, .my-xl { margin-bottom: var(--xl-size); }
+    .ml-xl, .mx-xl { margin-left: var(--xl-size); }
+
+    .ml-auto, .mx-auto { margin-left: auto; }
+    .mr-auto, .mx-auto { margin-right: auto; }
+    .mt-auto, .my-auto { margin-top: auto; }
+    .mb-auto, .my-auto { margin-bottom: auto; }
+
+    .my-none, .mt-none { margin-top: 0 !important; }
+    .mx-none, .mr-none { margin-right: 0 !important; }
+    .my-none, .mb-none { margin-bottom: 0 !important; }
+    .mx-none, .ml-none { margin-left: 0 !important; }
+
+    /* Padding Quick-Access Classes */
+    .p-xs { padding: var(--xs-size); }
+    .p-sm { padding: var(--sm-size); }
+    .p-md { padding: var(--md-size); }
+    .p-lg { padding: var(--lg-size); }
+    .p-xl { padding: var(--xl-size); }
+
+    .pt-xs, .py-xs { padding-top: var(--xs-size); }
+    .pr-xs, .px-xs { padding-right: var(--xs-size); }
+    .pb-xs, .py-xs { padding-bottom: var(--xs-size); }
+    .pl-xs, .px-xs { padding-left: var(--xs-size); }
+
+    .pt-sm, .py-sm { padding-top: var(--sm-size); }
+    .pr-sm, .px-sm { padding-right: var(--sm-size); }
+    .pb-sm, .py-sm { padding-bottom: var(--sm-size); }
+    .pl-sm, .px-sm { padding-left: var(--sm-size); }
+
+    .pt-md, .py-md { padding-top: var(--md-size); }
+    .pr-md, .px-md { padding-right: var(--md-size); }
+    .pb-md, .py-md { padding-bottom: var(--md-size); }
+    .pl-md, .px-md { padding-left: var(--md-size); }
+
+    .pt-lg, .py-lg { padding-top: var(--lg-size); }
+    .pr-lg, .px-lg { padding-right: var(--lg-size); }
+    .pb-lg, .py-lg { padding-bottom: var(--lg-size); }
+    .pl-lg, .px-lg { padding-left: var(--lg-size); }
+
+    .pt-xl, .py-xl { padding-top: var(--xl-size); }
+    .pr-xl, .px-xl { padding-right: var(--xl-size); }
+    .pb-xl, .py-xl { padding-bottom: var(--xl-size); }
+    .pl-xl, .px-xl { padding-left: var(--xl-size); }
+
+    .py-none, .pt-none { padding-top: 0 !important; }
+    .px-none, .pr-none { padding-right: 0 !important; }
+    .py-none, .pb-none { padding-bottom: 0 !important; }
+    .px-none, .pl-none { padding-left: 0 !important; }
+
+    /* Flex Quick-Access Classes */
+    .flex {
+	    display: flex;
+    }
+
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-column-reverse {
+	    display: flex;
+	    flex-direction: column-reverse;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex-row-reverse {
+	    display: flex;
+	    flex-direction: row-reverse;
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    .flex-grow {
+        flex-grow: 1;
+    }
+
+    .align-center { align-items: center; }
+    .align-end { align-items: flex-end; }
+
+    .content-center {
+	    align-content: center;
+    }
+
+    .justify-center { justify-content: center; }
+    .justify-start { justify-content: flex-start; }
+    .justify-end { justify-content: flex-end; }
+    .justify-around { justify-content: space-around; }
+    .justify-between { justify-content: space-between; }
+    .justify-evenly { justify-content: space-evenly; }
+
+    .gap-sm { gap: var(--sm-size); }
+    .gap-md { gap: var(--md-size); }
+    .gap-lg { gap: var(--lg-size); }
+    .gap-xl { gap: var(--xl-size); }
+
+    /* Display Quick-Access Classes */
+    .inline-block { display: inline-block; }
+
+    /* Font Quick-Access Classes */
+    .font-xl { font-size: var(--xl-font-size); }
+    .font-lg { font-size: var(--lg-font-size); }
+    .font-md { font-size: var(--md-font-size); }
+    .font-sm-plus { font-size: var(--sm-plus-font-size); }
+    .font-sm { font-size: var(--sm-font-size); }
+
+    .font-strike { text-decoration: line-through; }
+    .font-underline { text-decoration: underline; }
+    .font-overline { text-decoration: overline; }
+
+    .font-italic { font-style: italic; }
+    .font-bold { font-weight: bold; }
+
+    .font-black { color: #000000; }
+    .font-white { color: #ffffff; }
+    .font-gray { color: var(--brand-gray-text); }
+    .font-danger { color: var(--header-dropdown-button-bg-danger); }
+    .font-center { text-align: center; }
+
+    .no-wrap { white-space: nowrap; }
+
+    /* Consistent headings between h and non-h tags */
+    .heading {
+	    margin-top: 0;
+	    margin-bottom: var(--md-size);
+    }
+
+    .heading.font-xl { line-height: var(--xl-font-size); }
+    .heading.font-lg { line-height: var(--lg-font-size); }
+    .heading.font-md { line-height: var(--md-font-size); }
+    .heading.font-sm-plus { line-height: var(--sm-plus-font-size); }
+    .heading.font-sm { line-height: var(--sm-font-size); }
+
+    /* Font Clamp Quick-Access Classes */
+    .line-clamp,
+    .line-clamp-2,
+    .line-clamp-3,
+    .line-clamp-4,
+    .line-clamp-5 {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .line-clamp-2 { -webkit-line-clamp: 2 !important; }
+    .line-clamp-3 { -webkit-line-clamp: 3 !important; }
+    .line-clamp-4 { -webkit-line-clamp: 4 !important; }
+    .line-clamp-5 { -webkit-line-clamp: 5 !important; }
+
+    /* User-Select Quick-Access Classes */
+    .select-none { user-select: none; }
+
+    /* Position Quick-Access Classes */
+    .absolute { position: absolute; }
+    .relative { position: relative; }
+    .float-left { float: left; }
+    .float-right { float: right; }
+
+    .pos-top { top: 0; }
+    .pos-right { right: 0; }
+    .pos-bottom { bottom: 0; }
+    .pos-left { left: 0; }
+
+    .va-top { vertical-align: top; }
+    .va-middle { vertical-align: middle; }
+    .va-bottom { vertical-align: bottom; }
+
+    /* Transition Quick-Access Classes */
+    .trans-linear-quick {
+        transition: all 0.15s linear;
+    }
+
+    /* Background Quick-Access Classes */
+    .bg-gray { background: #cccccc; }
+    .bg-white { background-color: white; }
+    .bg-none { background: none; }
+
+    /* Border Quick-Access Classes */
+    .border-gray { border: 1px solid #cccccc; }
+    .tab-pane.border-gray { border: 1px solid #ddd; }
+    .no-border, .border-none { border: none !important; }
+
+    .bt-none { border-top: none !important; }
+    .br-none { border-right: none !important; }
+    .bb-none { border-bottom: none !important; }
+    .bl-none { border-left: none !important; }
+
+    /* Border Radius Quick-Access Classes */
+
+    .round-t-sm, .round-tl-sm { border-top-left-radius: var(--sm-border-size); }
+    .round-t-sm, .round-tr-sm { border-top-right-radius: var(--sm-border-size); }
+    .round-b-sm, .round-bl-sm { border-bottom-left-radius: var(--sm-border-size); }
+    .round-b-sm, .round-br-sm { border-bottom-right-radius: var(--sm-border-size); }
+    .round-sm { border-radius: var(--sm-border-size); }
+    .round-fully { border-radius: 50%; }
+
+    /* Misc Quick-Access Classes */
+    .haikei {
+        position: relative;
+        background-image: url('https://dz2cdn1.dzone.com/themes/dz20/images/polygon-scatter-haikei-shapes.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .haikei:before {
+        content: '';
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-event-background);
+        z-index: -1;
+    }
+
+    .margin-auto-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flex-auto-center {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mw-1100 { max-width: 1100px; }
+    .mw-1300 { max-width: 1300px; }
+    .full-width { width: 100%; }
+
+    .h-separator {
+        background-color: #cccccc;
+        height: 1px;
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    .no-spacing {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .inherit-color { color: inherit; }
+
+    .inherit-decoration { text-decoration: inherit; }
+
+    /* Table Quick-Access Classes */
+    .table-border-gray tr:not(:last-child) {
+        border-bottom: 1px solid #cccccc;
+    }
+
+    table.full-width tr td:last-child {
+        width:100%;
+    }
+
+    /* Animation Quick-Access Classes */
+    @keyframes anim-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(359deg); }
+    }
+
+    .anim-spin {
+        display: inline-block;
+        animation: anim-spin 2s infinite linear;
+    }
+
+    .hov-pointer { cursor: pointer; }
+    .hov-brighten:hover { filter: brightness(1.2); }
+    .hov-darken:hover { filter: brightness(0.95); }
+    .hov-underline:hover { text-decoration: underline; }
+
+    /* Small tweaks related to components when using these styles */
+    .nav-tabs {
+        border-bottom: none;
+    }
+    .tab-content > .flex-column.active,
+    .tab-content > .flex-row.active {
+        display: flex;
+    }
+
+    /* Alpine components with x-cloak should not be visible by default until conditionals kick in */
+    [x-cloak] { display: none !important; }
+</style>
+  <link rel="stylesheet" media="all" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/modal.css">
+  <script type="text/javascript" async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/js"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/bat.js.descarga" async=""></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/1694856440786573" async=""></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/1522913644386643" async=""></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/861593688406080" async=""></script><script async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/fbevents.js.descarga"></script><script type="text/javascript" async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/6si.min.js.descarga"></script><script async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/tag.aspx"></script><script async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/events.js.descarga"></script><script async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/l7xu65at89"></script><script async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/dyr9vdlv8t"></script><script type="text/javascript" async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/js(1)"></script><script type="text/javascript" async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/js(2)"></script><script type="text/javascript" async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/js(3)"></script><script type="text/javascript" async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/linkid.js.descarga"></script><script async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/gtm.js.descarga"></script><script defer="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/cdn.min.js.descarga"></script>
+<script>
+	document.addEventListener('alpine:init', () => {
+		Alpine.store('article', {
+			id: null,
+			engagement: {
+				open: false,
+				page: 1,
+				users: [],
+				additional: true,
+				loading: false,
+				initializing: false,
+				unauthorized: false,
+				enqueued: null,
+				dequeued: null,
+
+				reset() {
+					this.open = false;
+					this.page = 1;
+					this.users.splice(0);
+					this.additional = true;
+					this.loading = false;
+					this.initializing = false;
+					this.enqueued = null;
+					this.dequeued = null;
+				},
+
+				enqueue(user) {
+					this.dequeued = null;
+					this.enqueued = user;
+				},
+
+				dequeue(user) {
+					this.enqueued = null;
+					this.dequeued = user;
+				},
+
+				add(user) {
+					this.users.push(user);
+					this.enqueued = null;
+				},
+
+				remove(user) {
+					const index = this.users.findIndex(u => u.id === user.id);
+
+					if (index !== -1) {
+						this.users.splice(index, 1);
+					}
+
+					this.dequeued = null;
+				},
+
+				contains(user) {
+					return this.users.filter(u => u.id === user.id).length;
+				}
+			}
+		});
+
+		Alpine.effect(() => {
+			const store = Alpine.store('article');
+			if (!store.engagement.additional && store.engagement.enqueued) {
+				if (!store.engagement.contains(store.engagement.enqueued)) {
+					store.engagement.add(store.engagement.enqueued);
+				}
+			}
+		});
+
+		Alpine.effect(() => {
+			const store = Alpine.store('article');
+			if (store.engagement.page && store.engagement.dequeued) {
+				store.engagement.remove(store.engagement.dequeued);
+			}
+		})
+	});
+</script><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/f(1).txt" async=""></script><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202512040101/gpt" rel="compression-dictionary"><script type="text/javascript" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/api.min.js.descarga" async="" data-user="16961" data-campaign="r5hmbvvpuh6c9bj2mi76"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/ct" async=""></script><link rel="stylesheet" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/api.min.css" id="omapi-css" media="all"><link id="sa-css" rel="stylesheet" type="text/css" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/sa.css" media="all"><style id="_6si-shortening">/* This stylesheet is created by 6sense */
+            .mktoForm .mktoFormRow:has(._6si_sff_filled) {
+                display: none;
+            }
+            .mktoForm .mktoFormRow ._6si_sff_filled {
+                display: none;
+            }
+            .hs-form .hs-form-field:has(._6si_sff_filled) {
+                display: none;
+            }
+            .hs-form .hs-form-field ._6si_sff_filled {
+                display: none;
+            }
+            form .form-field:not(.error):has(._6si_sff_filled) {
+                display: none;
+            }
+            form .form-field:not(.error) ._6si_sff_filled {
+                display: none;
+            }
+            .elq-form .row:has(._6si_sff_filled) {
+                display: none;
+            }
+            .elq-form .row ._6si_sff_filled {
+                display: none;
+            }
+            .elq-form .field-wrapper:has(._6si_sff_filled) {
+                display: none;
+            }
+            .elq-form .field-wrapper ._6si_sff_filled {
+                display: none;
+            }</style><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/355032810.js.descarga" type="text/javascript" async="" data-ueto="ueto_86ce7acbbf"></script><link rel="stylesheet" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/codemirror.css"><link rel="stylesheet" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/styles(1).css"><link rel="stylesheet" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/froala_editor.pkgd.min.css"><link rel="stylesheet" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/gray.min.css"><link rel="stylesheet" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/mini-profile.css"><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/lazysizes.min.js.descarga"></script><script id="omapi-script" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/api.min(1).js.descarga" async=""></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/codeblocks.js.descarga"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/activity-bar.js.descarga"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/froala_editor.pkgd.min.js.descarga"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/content.js.descarga"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/content(1).js.descarga"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/content(2).js.descarga"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/codemirror.js.descarga"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/multiplex.js.descarga"></script><script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/meta.js.descarga"></script></head>
+<body x-data="" class="skybox-auto-collapse" style="overflow-y: auto;"><a href="https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration#" tabindex="-1" aria-hidden="true" rel="nofollow" style="opacity: 0.01; position: absolute; z-index: -999; width: 54px; height: 22px;">___</a><div style="opacity: 0.01; position: absolute; z-index: -1000; width: 54px; height: 22px;"></div>
+    <div class="skybox skybox-closeBtn" data-gpt-slot="skybox" id="div-gpt-ad-1435246566686-99" data-google-query-id="CIb-k46c0pEDFX9LuAQdOfMldg" style="display: none;"><div id="google_ads_iframe_5055/dz_skybox_0__container__" style="border: 0pt none; width: 5px; height: 5px;"></div></div>
+<header id="ftl-header">
+    <div class="header-top">
+<div class="header-container">
+    <div class="pull-left logo-container">
+        <div class="logo">
+            <a class="inner" href="https://dzone.com/">
+                <picture>
+                    <source srcset="https://dz2cdn1.dzone.com/themes/dz20/images/dz_logo_2021_cropped.webp" type="image/webp">
+                    <source srcset="https://dz2cdn1.dzone.com/themes/dz20/images/dz_logo_2021_cropped.png" type="image/png">
+                    <img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/dz_logo_2021_cropped.png" width="181" height="56" alt="DZone">
+                </picture>
+            </a>
+        </div>
+    </div>
+
+    <div class="pull-right login-and-search">
+        <div id="authenticated-block" class="logged-in">
+            <div class="welcome-back">Thanks for visiting DZone today,</div>
+            <div id="user-header" class="user-info">
+                <button class="user-avatar">
+                    <span id="header-username" class="username"></span>
+                    <img id="header-avatar" src="https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration" alt="user avatar">
+                </button>
+                <div id="user-dropdown" class="browse-user-menu">
+                    <div class="user-content">
+                        <a id="header-user-plug" href="https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration#" class="user-description"></a>
+                        <a id="header-user-edit" href="https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration#" class="edit-profile">Edit Profile</a>
+                    </div>
+                    <ul class="user-actions">
+                        <li id="first-user-action">
+                            <a id="header-dropdown-manage-email" href="https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration#">Manage Email Subscriptions</a>
+                        </li>
+                        <li>
+                            <a href="https://dzone.com/articles/how-to-submit-a-post-to-dzone?utm_source=DZone&amp;utm_medium=user_dropdown&amp;utm_campaign=how_to_post">
+                                How to Post to DZone
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://dzone.com/articles/dzones-article-submission-guidelines">
+                                Article Submission Guidelines
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="bottom">
+                        <a href="https://dzone.com/users/logout.html" class="sign-out">Sign Out</a>
+                        <a id="dropdown-view-profile" href="https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration#" class="view-profile">View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <button id="post-button" class="post-content--button">
+                    <span class="post-class">Post</span>
+                    <i class="icon-plus"></i>
+                </button>
+
+                <div id="post-menu" class="posting-links">
+                    <div class="posting-links-menu">
+                        <ul>
+                            <li>
+                                <img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/dz-postarticle.svg" width="15" height="18" style="width: 15px; height: 18px;">
+                                <a href="https://dzone.com/content/article/post.html">Post an Article</a>
+                            </li>
+                            <li>
+                                <a id="drafts-link" href="https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration#">Manage My Drafts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="unauthenticated-block" class="shown">
+            <div class="dz-intro">Over 2 million developers have joined DZone.</div>
+            <div class="mobile-invisible sign-in-join">
+                <a href="https://dzone.com/users/login.html">Log In</a>
+                <span class="dz-intro-span">/</span>
+                <a href="https://dzone.com/static/registration.html">Join</a>
+            </div>
+            <a class="join-icon" href="https://dzone.com/users/login.html"><i class="icon-user"></i></a>
+        </div>
+
+        <script>
+            document.addEventListener('alpine:init', () => {
+                Alpine.data('searchDrawer', () => ({
+                    open: false,
+                    query: '',
+                    minCharsMet: false,
+
+                    toggleVisibility() {
+                        this.open = !this.open;
+                        if (this.open) {
+                            this.$nextTick(() => {
+                                this.$refs.query.focus();
+                            });
+                        }
+                    },
+
+                    updateSearchValue() {
+                        if (!this.query || !this.query.length || this.query.length < 3) {
+                            this.minCharsMet = false;
+                            return;
+                        }
+                        this.minCharsMet = true;
+                        localStorage.setItem('ls.searchValue', this.query);
+                    },
+
+                    searchSite() {
+                        if (this.minCharsMet) {
+                            window.location = '/search';
+                        }
+                    }
+                }));
+            });
+        </script>
+
+        <div class="headerSearch" x-data="searchDrawer()">
+            <button class="icon-search dropdown-toggle" x-on:click="toggleVisibility()"></button>
+            <template x-teleport=".header-container" data-teleport-template="true"></template>
+        </div>
+    </div>
+<div id="search-drawer" x-show="open" x-on:click.outside="open = false" x-transition="" data-teleport-target="true" style="display: none;">
+                    <div class="search-input">
+                        <input type="text" placeholder="Search" autofocus="autofocus" x-model="query" x-ref="query" x-on:input.change="updateSearchValue()" x-on:keyup.enter="searchSite()">
+                        <button x-on:click="searchSite()" x-bind:disabled="!minCharsMet" disabled="disabled">
+                            <span>Search</span>
+                        </button>
+                    </div>
+                    <div class="search-footer">
+                        Please enter at least three characters to search
+                    </div>
+                </div></div>    </div>
+    <div class="header-bottom">
+        <div class="header-bottom-container">
+            <a class="resource-link" href="https://dzone.com/refcardz">Refcards</a>
+            <a class="resource-link" href="https://dzone.com/trendreports">Trend Reports</a>
+            <div class="resource-link link-menu">
+                <a href="https://dzone.com/events">Events</a>
+                <a href="https://dzone.com/events/video-library">Video Library</a>
+            </div>
+        </div>
+    </div>
+    <nav class="header-menu-bar">
+        <div class="header-menu resource-category">
+            <a href="https://dzone.com/refcardz">Refcards</a>
+        </div>
+        <div class="header-menu-separator resource-category-separator"></div>
+        <div class="header-menu resource-category">
+            <a href="https://dzone.com/trendreports">Trend Reports</a>
+        </div>
+        <div class="header-menu-separator resource-category-separator"></div>
+        <div class="header-menu resource-category no-bottom-radius" tabindex="1" data-click-activation="">
+            <p class="menu-label">Events</p>
+            <div class="header-menu-items" style="display: none;">
+                <div class="header-menu-columns">
+                    <a class="header-menu-item" href="https://dzone.com/events">View Events</a>
+                    <a class="header-menu-item" href="https://dzone.com/events/video-library">Video Library</a>
+                </div>
+            </div>
+        </div>
+            <div class="header-menu zone-menu" tabindex="1" data-click-activation="">
+                <p class="menu-label">Zones <i class="icon-down-dir icon-closed"></i><i class="icon-right-dir icon-open"></i></p>
+                <div class="header-menu-items" style="display: none;">
+                    <div class="header-menu-columns">
+                            <div class="header-menu-column-item">
+                                <a class="header-menu-item" href="https://dzone.com/culture-and-methodologies">Culture and Methodologies</a>
+                                        <a class="header-menu-item" href="https://dzone.com/agile">Agile</a>
+                                        <a class="header-menu-item" href="https://dzone.com/career-development">Career Development</a>
+                                        <a class="header-menu-item" href="https://dzone.com/methodologies">Methodologies</a>
+                                        <a class="header-menu-item" href="https://dzone.com/team-management">Team Management</a>
+                            </div>
+                            <div class="header-menu-column-item">
+                                <a class="header-menu-item" href="https://dzone.com/data-engineering">Data Engineering</a>
+                                        <a class="header-menu-item" href="https://dzone.com/ai-ml">AI/ML</a>
+                                        <a class="header-menu-item" href="https://dzone.com/big-data">Big Data</a>
+                                        <a class="header-menu-item" href="https://dzone.com/data">Data</a>
+                                        <a class="header-menu-item" href="https://dzone.com/databases">Databases</a>
+                                        <a class="header-menu-item" href="https://dzone.com/iot">IoT</a>
+                            </div>
+                            <div class="header-menu-column-item">
+                                <a class="header-menu-item" href="https://dzone.com/software-design-and-architecture">Software Design and Architecture</a>
+                                        <a class="header-menu-item" href="https://dzone.com/cloud-architecture">Cloud Architecture</a>
+                                        <a class="header-menu-item" href="https://dzone.com/containers">Containers</a>
+                                        <a class="header-menu-item" href="https://dzone.com/integration">Integration</a>
+                                        <a class="header-menu-item" href="https://dzone.com/microservices">Microservices</a>
+                                        <a class="header-menu-item" href="https://dzone.com/performance">Performance</a>
+                                        <a class="header-menu-item" href="https://dzone.com/security">Security</a>
+                            </div>
+                            <div class="header-menu-column-item">
+                                <a class="header-menu-item" href="https://dzone.com/coding">Coding</a>
+                                        <a class="header-menu-item" href="https://dzone.com/frameworks">Frameworks</a>
+                                        <a class="header-menu-item" href="https://dzone.com/java">Java</a>
+                                        <a class="header-menu-item" href="https://dzone.com/javascript">JavaScript</a>
+                                        <a class="header-menu-item" href="https://dzone.com/languages">Languages</a>
+                                        <a class="header-menu-item" href="https://dzone.com/tools">Tools</a>
+                            </div>
+                            <div class="header-menu-column-item">
+                                <a class="header-menu-item" href="https://dzone.com/testing-deployment-and-maintenance">Testing, Deployment, and Maintenance</a>
+                                        <a class="header-menu-item" href="https://dzone.com/deployment">Deployment</a>
+                                        <a class="header-menu-item" href="https://dzone.com/devops-and-cicd">DevOps and CI/CD</a>
+                                        <a class="header-menu-item" href="https://dzone.com/maintenance">Maintenance</a>
+                                        <a class="header-menu-item" href="https://dzone.com/monitoring-and-observability">Monitoring and Observability</a>
+                                        <a class="header-menu-item" href="https://dzone.com/testing-tools-and-frameworks">Testing, Tools, and Frameworks</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+                <div class="header-menu parent-category" tabindex="1">
+                    <a href="https://dzone.com/culture-and-methodologies">Culture and Methodologies</a>
+                    <div class="header-menu-items" style="display: none;">
+                                <a class="header-menu-item" href="https://dzone.com/agile">Agile</a>
+                                <a class="header-menu-item" href="https://dzone.com/career-development">Career Development</a>
+                                <a class="header-menu-item" href="https://dzone.com/methodologies">Methodologies</a>
+                                <a class="header-menu-item" href="https://dzone.com/team-management">Team Management</a>
+                    </div>
+                </div>
+                <div class="header-menu-separator parent-category-separator"></div>
+                <div class="header-menu parent-category" tabindex="2">
+                    <a href="https://dzone.com/data-engineering">Data Engineering</a>
+                    <div class="header-menu-items" style="display: none;">
+                                <a class="header-menu-item" href="https://dzone.com/ai-ml">AI/ML</a>
+                                <a class="header-menu-item" href="https://dzone.com/big-data">Big Data</a>
+                                <a class="header-menu-item" href="https://dzone.com/data">Data</a>
+                                <a class="header-menu-item" href="https://dzone.com/databases">Databases</a>
+                                <a class="header-menu-item" href="https://dzone.com/iot">IoT</a>
+                    </div>
+                </div>
+                <div class="header-menu-separator parent-category-separator"></div>
+                <div class="header-menu parent-category" tabindex="3">
+                    <a href="https://dzone.com/software-design-and-architecture">Software Design and Architecture</a>
+                    <div class="header-menu-items" style="display: none;">
+                                <a class="header-menu-item" href="https://dzone.com/cloud-architecture">Cloud Architecture</a>
+                                <a class="header-menu-item" href="https://dzone.com/containers">Containers</a>
+                                <a class="header-menu-item" href="https://dzone.com/integration">Integration</a>
+                                <a class="header-menu-item" href="https://dzone.com/microservices">Microservices</a>
+                                <a class="header-menu-item" href="https://dzone.com/performance">Performance</a>
+                                <a class="header-menu-item" href="https://dzone.com/security">Security</a>
+                    </div>
+                </div>
+                <div class="header-menu-separator parent-category-separator"></div>
+                <div class="header-menu parent-category" tabindex="4">
+                    <a href="https://dzone.com/coding">Coding</a>
+                    <div class="header-menu-items" style="display: none;">
+                                <a class="header-menu-item" href="https://dzone.com/frameworks">Frameworks</a>
+                                <a class="header-menu-item" href="https://dzone.com/java">Java</a>
+                                <a class="header-menu-item" href="https://dzone.com/javascript">JavaScript</a>
+                                <a class="header-menu-item" href="https://dzone.com/languages">Languages</a>
+                                <a class="header-menu-item" href="https://dzone.com/tools">Tools</a>
+                    </div>
+                </div>
+                <div class="header-menu-separator parent-category-separator"></div>
+                <div class="header-menu parent-category" tabindex="5">
+                    <a href="https://dzone.com/testing-deployment-and-maintenance">Testing, Deployment, and Maintenance</a>
+                    <div class="header-menu-items" style="display: none;">
+                                <a class="header-menu-item" href="https://dzone.com/deployment">Deployment</a>
+                                <a class="header-menu-item" href="https://dzone.com/devops-and-cicd">DevOps and CI/CD</a>
+                                <a class="header-menu-item" href="https://dzone.com/maintenance">Maintenance</a>
+                                <a class="header-menu-item" href="https://dzone.com/monitoring-and-observability">Monitoring and Observability</a>
+                                <a class="header-menu-item" href="https://dzone.com/testing-tools-and-frameworks">Testing, Tools, and Frameworks</a>
+                    </div>
+                </div>
+                <div class="header-menu-separator parent-category-separator"></div>
+    </nav>
+</header>
+
+<script>
+    const csrf = {
+        parameter: 'TH_CSRF',
+        header: 'X-TH-CSRF',
+        token: '7394950639234408840'
+    }; // set csrf for auth-status script
+</script>
+<script>
+addEventListener('DOMContentLoaded', function() {
+    handleRedirects();
+    handleMenus();
+    handleMobileMenuHeights();
+    handleGotoLinks();
+});
+
+function isHidden(element) {
+    try {
+        return window.getComputedStyle(element).display === 'none';
+    } catch (_) {
+        return false;
+    }
+}
+
+function getLink(element) {
+    if (element.hasAttribute('data-goto')) {
+        return element.getAttribute('data-goto');
+    }
+    return element.href;
+}
+
+function isLeftClick(event) {
+    if (event.altKey || event.shiftKey) {
+        return false;
+    } else if ('buttons' in event || 'which' in event) {
+        return event.buttons === 1 || event.which === 1;
+    } else {
+        return (event.button === 1 || (event.type === 'click'));
+    }
+}
+
+function handleRedirects() {
+    const redirections = [...document.querySelectorAll('[data-activate-menu]'), ...document.querySelectorAll('[data-click-target]')];
+
+    redirections.forEach(function(element) {
+        const menuSelector = element.getAttribute('data-activate-menu') || element.getAttribute('data-click-target');
+        const redirectingElement = document.querySelector(menuSelector);
+        if (redirectingElement) {
+            element.style.cursor = 'pointer';
+            const redirect = function(e) {
+                if (redirectingElement.hasAttribute('href') || redirectingElement.hasAttribute('data-goto')) {
+                    if (redirectingElement.hasAttribute('data-new-window') || e.ctrlKey || e.metaKey) {
+                        window.open(getLink(redirectingElement), '_blank');
+                    } else {
+                        window.open(getLink(redirectingElement), '_self');
+                    }
+                } else {
+                    const evt = new e.constructor(e.type, e);
+                    redirectingElement.dispatchEvent(evt);
+                }
+            };
+            element.addEventListener('mouseup', redirect);
+            element.addEventListener('mousedown', (e) => e.preventDefault());
+            element.addEventListener('click', (e) => e.preventDefault());
+        }
+    });
+}
+
+function handleMenus() {
+    const menuElements = [
+        ...document.querySelectorAll('.header-menu > a'),
+        ...document.querySelectorAll('.header-menu > p.menu-label')
+    ];
+
+    let scrollYMemory = -1;
+
+    function scrollToMemory() {
+        if (scrollYMemory !== -1) {
+            setTimeout(function() {
+                window.scrollTo(0, scrollYMemory);
+                scrollYMemory = -1;
+            }, 10);
+        }
+    }
+
+    function hideMenus() {
+        // unfocus menus & items, and set the menus to non-visible.
+        menuElements.forEach(function (element) {
+            element.blur();
+            element.parentElement.blur();
+            element.parentElement.classList.remove('menu-opened');
+            const menuItems = element.parentElement.querySelector('.header-menu-items');
+            if (menuItems) {
+                menuItems.style.display = 'none';
+            }
+        });
+        const wasHidden = document.body.style.overflowY === 'hidden';
+        document.body.style.overflowY = 'auto';
+        if (wasHidden) {
+            scrollToMemory();
+        }
+    }
+
+    function isEventOutsideMenu(e) {
+        return e.target.closest && !e.target.closest('.header-menu') && !e.target.closest('[data-activate-menu]');
+    }
+
+    // Handle mobile menu toggling
+    menuElements.forEach(function(element) {
+        const menu = element.parentElement;
+        const headerItems = menu.querySelector('.header-menu-items');
+        const menuEntries = headerItems ? headerItems.querySelectorAll('.header-menu-item') : [];
+
+        const focus = function() {
+            menu.focus();
+            menu.classList.add('menu-opened');
+            if (headerItems) {
+                headerItems.style.display = 'block';
+            }
+            if (menu.classList.contains('zone-menu')) {
+                scrollYMemory = window.scrollY;
+                document.body.style.overflowY = 'hidden';
+            } else {
+                scrollYMemory = -1;
+            }
+        };
+
+        const unfocus = function() {
+            menu.blur();
+            menu.classList.remove('menu-opened');
+            if (headerItems) {
+                headerItems.style.display = 'none';
+            }
+            const wasHidden = document.body.style.overflowY === 'hidden';
+            document.body.style.overflowY = 'auto';
+            if (wasHidden) {
+                scrollToMemory();
+            }
+        };
+
+        const toggleMenuVisibility = function(e) {
+            if ((e.type === 'click' || e.type === 'mouseup') && !isLeftClick(e)) {
+                e.preventDefault();
+                return;
+            }
+            const hidden = isHidden(headerItems);
+            if (menu.hasAttribute('data-click-activation')) { // handle click activated toggling
+                if (hidden) {
+                    hideMenus(); // hide other open menus first
+                    focus();
+                } else {
+                    unfocus();
+                }
+                e.preventDefault();
+            } else if (hidden) {
+                hideMenus(); // hide other open menus first
+                focus();
+                e.preventDefault(); // prevent 'click' event from firing when menu is hidden
+            }
+        };
+
+        element.addEventListener('touchend', toggleMenuVisibility);
+        element.addEventListener('mouseup', toggleMenuVisibility);
+
+        // Add hover events to non-click-activated menus, even though CSS should cover it.
+        if (!menu.hasAttribute('data-click-activation')) {
+            menu.addEventListener('mouseover', function () {
+                hideMenus(); // hide other open menus first
+                focus();
+            });
+
+            menu.addEventListener('mouseout', function (e) {
+                if (isEventOutsideMenu(e)) {
+                    unfocus();
+                }
+            });
+        }
+
+        // Hide menu when child is clicked
+        menuEntries.forEach(function(menuEntry) {
+            const linkToItem = function(e) {
+                if (e.type === 'mousedown' || e.type === 'click') {
+                    e.preventDefault();
+                    return;
+                }
+                if (e.type === 'mouseup' && !isLeftClick(e)) {
+                    e.preventDefault();
+                    return;
+                }
+                window.open(getLink(menuEntry), (e.ctrlKey || e.metaKey) ? '_blank' : (menuEntry.target || '_self'));
+                unfocus();
+                e.preventDefault();
+            };
+
+            const linkToMobileItem = function(e) {
+                if (e.type === 'touchstart') {
+                    menuEntry.setAttribute('data-touchmove', false);
+                } else if (e.type === 'touchmove') {
+                    menuEntry.setAttribute('data-touchmove', true);
+                } else if (e.type === 'touchend' && (!menuEntry.hasAttribute('data-touchmove') || menuEntry.getAttribute('data-touchmove').toLowerCase() === 'false')) {
+                    window.open(getLink(menuEntry), (e.ctrlKey || e.metaKey) ? '_blank' : (menuEntry.target || '_self'));
+                    unfocus();
+                    e.preventDefault();
+                }
+            };
+
+            menuEntry.addEventListener('mousedown', linkToItem);
+            menuEntry.addEventListener('mouseup', linkToItem);
+            menuEntry.addEventListener('click', linkToItem);
+            menuEntry.addEventListener('touchstart', linkToMobileItem);
+            menuEntry.addEventListener('touchmove', linkToMobileItem);
+            menuEntry.addEventListener('touchend', linkToMobileItem);
+        });
+    });
+
+    function hideIfNonMenuBounds(e) {
+        if (isEventOutsideMenu(e)) {
+            hideMenus();
+        }
+    }
+
+    addEventListener('mousemove', hideIfNonMenuBounds);
+    addEventListener('touchend', hideIfNonMenuBounds);
+    addEventListener('mouseup', hideIfNonMenuBounds);
+    addEventListener('mousedown', hideIfNonMenuBounds);
+    addEventListener('click', hideIfNonMenuBounds);
+}
+
+function handleMobileMenuHeights() {
+    function setAppHeight() {
+        document.documentElement.style.setProperty('--app-height', window.innerHeight + 'px');
+    }
+
+    addEventListener('resize', function() {
+        setAppHeight();
+    });
+
+    setAppHeight();
+}
+
+function handleGotoLinks() {
+    // Add anchor mimicking to elements with data-goto attributes
+    // This addresses SEO concerns of linking to noindex pages by allowing JS to handle the URL
+    const anchorElements = document.querySelectorAll('*[data-goto]');
+    anchorElements.forEach((anchorElement) => {
+        anchorElement.addEventListener('mouseover', () => {
+            anchorElement.style.cursor = 'pointer';
+            anchorElement.style.textDecoration = 'underline';
+        });
+        anchorElement.addEventListener('mouseout', () => {
+            anchorElement.style.cursor = 'unset';
+            anchorElement.style.textDecoration = 'unset';
+        });
+        anchorElement.addEventListener('mouseup', (e) => {
+            e.preventDefault();
+        });
+        anchorElement.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+        });
+        anchorElement.addEventListener('click', (e) => {
+            e.preventDefault();
+            const anchorHref = anchorElement.getAttribute('data-goto');
+            if (anchorElement.hasAttribute('data-new-window') || e.ctrlKey || e.metaKey) {
+                window.open(anchorHref, '_blank');
+            } else {
+                window.open(anchorHref, '_self');
+            }
+        });
+    });
+}
+</script><script>
+const authenticatedBlock = document.querySelector('#authenticated-block');
+const unauthenticatedBlock = document.querySelector('#unauthenticated-block');
+
+let authenticated = {
+    isAuthenticated: false,
+    isAdmin: false,
+	user: {
+		id: null,
+		name: null,
+		url: null,
+		profileImage: null,
+	}
+};
+
+fetch('/services/internal/data/articles-getAuthenticationStatus', {
+    headers: {
+        'Accept': 'application/json'
+    }
+})
+    .then(function (result) {
+        return result.json()
+    })
+    .then(function (result) {
+        const res = result.result.data
+        if (!res.authenticated) {
+            unauthenticatedBlock.classList.add('shown')
+        } else {
+			authenticated.user.id = res.id;
+			authenticated.user.name = res.realName;
+			authenticated.user.url = res.profileUrl;
+			authenticated.user.profileImage = res.avatar;
+			authenticated.user.jobTitle = res.jobTitle;
+			authenticated.user.companyName = res.companyName;
+
+            bindProps('#header-username', null, null, (res.firstName || res.username), null)
+            bindProps('#header-avatar', null, res.avatar, null, null)
+            bindProps('#header-user-plug', res.profileUrl, null, res.realName, null)
+            bindProps('#header-user-edit', '/users/' + res.id + '/edit.html', null, null, null)
+            bindProps('#header-dropdown-manage-email', '/newsletters/' + res.id + '/manage.html', null, null, null)
+            bindProps('#dropdown-view-profile', res.profileUrl, null, null, null)
+            bindProps('#drafts-link', '/users/' + res.id + '/drafts.html', null, null, null)
+
+            if (res.isAdmin) {
+                // Construct backwards so the #after call places elements in the correct order
+                const firstUserAction = document.querySelector('#first-user-action')
+                const adminConsoleItem = document.createElement('li')
+                const adminConsoleLink = createLink('/dzone/staff/index.html', 'Admin Console')
+                adminConsoleItem.appendChild(adminConsoleLink)
+                firstUserAction.after(adminConsoleItem)
+
+                const moderationItem = document.createElement('li')
+                const moderationLink = createLink('/moderation/list.html', 'Moderation')
+                moderationItem.appendChild(moderationLink)
+                firstUserAction.after(moderationItem)
+
+	            const bountyModerationItem = document.createElement('li')
+	            const bountyModerationLink = createLink('/moderation/bounties', 'Bounty Moderation')
+	            bountyModerationItem.appendChild(bountyModerationLink)
+	            firstUserAction.after(bountyModerationItem)
+            }
+
+            authenticated.isAuthenticated = res.authenticated;
+            authenticated.isAdmin = res.isAdmin;
+
+            authenticatedBlock.classList.add('shown')
+        }
+    }).catch(function (result) {
+        console.error(result)
+})
+
+/**
+ * Binds different properties to the selected element.
+ *
+ * @param selector - Selector to select the element
+ * @param href - href attribute value
+ * @param src - src attribute value
+ * @param innerHTML - innerHTML property value
+ * @param innerText - innerText property value
+ */
+function bindProps(selector, href, src, innerHTML, innerText) {
+    const element = document.querySelector(selector)
+    if (element) {
+        if (href) element.href = href
+        if (src) element.src = src
+        if (innerHTML) element.innerHTML = innerHTML
+        if (innerText) element.innerText = innerText
+    }
+}
+
+/**
+ * Creates a new link element.
+ *
+ * @param href - href attribute value
+ * @param innerText - innerText property value
+ * @returns {HTMLAnchorElement} The generated link element
+ */
+function createLink(href, innerText) {
+    const link = document.createElement('a')
+    link.href = href
+    link.innerText = innerText
+
+    return link
+}
+</script><script>
+const userHeader = document.querySelector('#user-header')
+const userDropdown = document.querySelector('#user-dropdown')
+const postDropdown = document.querySelector('#post-button')
+const postMenu = document.querySelector('#post-menu')
+
+let userDropdownOpen = false
+let postDropdownOpen = false
+
+document.addEventListener('click', function(event) {
+    if (postDropdown && postDropdown.contains(event.target)) {
+        setUserDropdown(false)
+        setPostDropdown(!postDropdownOpen)
+    } else if (userHeader && userHeader.contains(event.target)) {
+        setPostDropdown(false)
+        setUserDropdown(!userDropdownOpen)
+    } else {
+        setUserDropdown(false)
+        setPostDropdown(false)
+    }
+})
+
+function setUserDropdown(value) {
+    userDropdownOpen = value
+    if (userDropdownOpen) {
+        if (userDropdown) {
+            userDropdown.classList.add('open')
+        }
+    } else {
+        if (userDropdown) {
+            userDropdown.classList.remove('open')
+        }
+    }
+}
+
+function setPostDropdown(value) {
+    postDropdownOpen = value
+    if (postDropdownOpen) {
+        if (postMenu) {
+            postMenu.classList.add('open')
+        }
+    } else {
+        if (postMenu) {
+            postMenu.classList.remove('open')
+        }
+    }
+}
+</script><script>
+	document.addEventListener("alpine:init", () => {
+		Alpine.store('global', {
+			executeHttp(path, body, method) {
+				const options = {
+					method: method,
+					headers: {
+						[csrf.header]: csrf.token
+					}
+				};
+
+				if (method !== 'GET') {
+					options.body = JSON.stringify(body);
+					options.headers = {
+						...options.headers,
+						'Content-Type': 'application/json; charset=UTF-8'
+					};
+				}
+
+				return new Promise((resolve, reject) => {
+					fetch(path, options)
+						.then(res => {
+							if (!res.ok) {
+								reject(res);
+							} else {
+								resolve(res);
+							}
+						})
+						.catch(err => reject(err));
+				});
+			},
+			getFromService(path) {
+				return this.executeHttp(path, null, 'GET');
+			},
+			postToService(path, body = {}) {
+				return this.executeHttp(path, body, 'POST');
+			},
+			putToService(path, body = {}) {
+				return this.executeHttp(path, body, 'PUT');
+			}
+		});
+	});
+</script>
+<link rel="stylesheet" media="all" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/colors.css">
+<link rel="stylesheet" media="all" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/styles(2).css">
+
+
+
+
+
+<div id="body-container">
+		<div id="announcement-container-outer">
+			<div id="announcement-previous" style="display: none;">
+				<i class="icon-angle-left"></i>
+			</div>
+			<div id="announcement-next" style="display: none;">
+				<i class="icon-angle-right"></i>
+			</div>
+			<div id="announcement-container">
+					<div class="announcement announcement-count-2" data-position="1">
+						<div class="body"><p><strong>DZone’s 2025 Developer Survey is LIVE!</strong> Share your insights and enter to win up to $300</p></div>
+						<div class="spacer"></div>
+						<a href="https://survey.alchemer.com/s3/8545722/dzannounce" target="_blank">
+							<button>❗️Take the Survey❗️</button>
+						</a>
+					</div>
+						<div class="separator"></div>
+					<div class="announcement announcement-count-2" data-position="2">
+						<div class="body"><p><strong>Secrets Management: </strong>Learn the core practices for a centralized secrets management strategy, key measures for secrets injection, and more.</p></div>
+						<div class="spacer"></div>
+						<a href="https://dzone.com/link/2025-rc-secrets-management-core-practices-announcement" target="_self">
+							<button>⚡️Read the Refcard</button>
+						</a>
+					</div>
+			</div>
+		</div>
+	<script type="text/javascript" async="">
+(function() {
+    let announcementPosition = 1;
+    let minAnnouncementPosition = -1;
+    let maxAnnouncementPosition = -1;
+
+    const announcementPrevBtn = document.querySelector('#announcement-previous');
+    const announcementNextBtn = document.querySelector('#announcement-next');
+
+    function withAnnouncements(callback) {
+        const announcements = document.querySelectorAll('#announcement-container .announcement');
+        for (let announcement of announcements) {
+            callback(announcement);
+        }
+    }
+
+    function initAnnouncementVars() {
+        document.querySelector(':root').style.setProperty('--mobile-announcement-separator-width', '1px');
+        withAnnouncements(function(announcement) {
+            const pos = parseInt(announcement.getAttribute('data-position'));
+            minAnnouncementPosition = minAnnouncementPosition === -1 ? pos : Math.min(minAnnouncementPosition, pos);
+            maxAnnouncementPosition = maxAnnouncementPosition === -1 ? pos : Math.max(maxAnnouncementPosition, pos);
+        });
+
+        if (document.querySelector('.announcementBarContainer')) {
+            document.querySelector(':root').style.setProperty('--body-top-padding', '0');
+        }
+
+        if (maxAnnouncementPosition <= 0) {
+            document.querySelector(':root').style.setProperty('--body-top-padding', '0');
+        }
+
+        sizeToFullWhenOneEntryOnMobile();
+    }
+
+    function setAnnouncementPosition(position) {
+        if (window.outerWidth >= 890) {
+            return; // we do not need to change the position, since we can display everything on desktop.
+        }
+
+        // Make the announcement cyclical
+        if (minAnnouncementPosition !== -1 && maxAnnouncementPosition !== -1) {
+            if (position > maxAnnouncementPosition) {
+                position = minAnnouncementPosition; // overflow to the first announcement
+            } else if (position < minAnnouncementPosition) {
+                position = maxAnnouncementPosition; // underflow to the last announcement
+            }
+            announcementPosition = position;
+        }
+
+        const shownAnnouncements = [];
+
+        let reverseFlex = false; // should only be true when the first and last items are showing
+
+        // Now that the position is valid, apply the transforms
+        withAnnouncements(function(announcement) {
+            const pos = parseInt(announcement.getAttribute('data-position'));
+            const isWrapped = position === maxAnnouncementPosition && pos === minAnnouncementPosition; // showing first + last at same time
+            const doesNextQualify = window.outerWidth >= 500 && (pos === position + 1 || isWrapped);
+
+            if (pos === position || doesNextQualify) {
+                shownAnnouncements.push(announcement);
+            } else {
+                announcement.style.display = 'none';
+            }
+
+            announcement.style.opacity = 0.0;
+
+            if (isWrapped) {
+                reverseFlex = true;
+            }
+        });
+
+        for (let announcement of shownAnnouncements) {
+            announcement.style.display = 'flex';
+            announcement.style.opacity = 1.0;
+        }
+
+        const announcementContainer = document.querySelector('#announcement-container');
+        if (announcementContainer) {
+            announcementContainer.style.flexDirection = reverseFlex ? 'row-reverse' : 'row';
+        }
+    }
+
+    function resetAnnouncements() {
+        announcementPosition = 1;
+        const announcementContainer = document.querySelector('#announcement-container');
+        if (announcementContainer) {
+            announcementContainer.style.flexDirection = 'row';
+        }
+        withAnnouncements(function(announcement) {
+            announcement.style.opacity = 1.0;
+            announcement.style.display = 'flex';
+        });
+    }
+
+    function sizeToFullWhenOneEntryOnMobile() {
+        if (maxAnnouncementPosition <= 2 && announcementPrevBtn && announcementNextBtn) {
+            announcementPrevBtn.style.display = maxAnnouncementPosition === 2 && window.outerWidth < 500 ? 'flex' : 'none';
+            announcementNextBtn.style.display = maxAnnouncementPosition === 2 && window.outerWidth < 500 ? 'flex' : 'none';
+        }
+        if (maxAnnouncementPosition === 1 && window.outerWidth >= 500 && window.outerWidth < 890) {
+            document.querySelector(':root').style.setProperty('--mobile-announcement-separator-width', '0');
+            document.querySelector('#announcement-container .announcement').style.maxWidth = '100%';
+        }
+    }
+
+    function resetAnnouncementsOnResize() {
+        announcementPosition = 1; // we want to reset the announcement position every resize
+        if (window.outerWidth >= 890) { // 4 announcements can be shown (215px * 4) + separator padding
+            resetAnnouncements();
+        } else { // if we're still on mobile, set the position to normalize things after resize
+            setAnnouncementPosition(announcementPosition);
+            sizeToFullWhenOneEntryOnMobile();
+        }
+    }
+
+    window.addEventListener('resize', resetAnnouncementsOnResize);
+
+    initAnnouncementVars();
+    setAnnouncementPosition(announcementPosition); // sets the min & max positions as well as initializes transforms
+
+    if (announcementPrevBtn) {
+        announcementPrevBtn.onclick = function() {
+            setAnnouncementPosition(announcementPosition - 1);
+        };
+    }
+
+    if (announcementNextBtn) {
+        announcementNextBtn.onclick = function() {
+            setAnnouncementPosition(announcementPosition + 1);
+        };
+    }
+})();	</script>
+  <div id="ftl-article" class="trending-article-body">
+      <div class="trending-sidebar" style="top: 88px;">
+        <div class="trending" style="top: 88px;">
+          <h3>Related</h3>
+          <div class="trending-separator"></div>
+          <ul>
+              <li class="item">
+                <a href="https://dzone.com/articles/improving-unit-test-maintainability" class="related-link">Improving Unit Test Maintainability</a>
+              </li>
+              <li class="item">
+                <a href="https://dzone.com/articles/improving-java-code-security" class="related-link">Improving Java Code Security</a>
+              </li>
+              <li class="item">
+                <a href="https://dzone.com/articles/defensive-programming-with-klojang-check" class="related-link">Defensive Programming With Klojang Check</a>
+              </li>
+              <li class="item">
+                <a href="https://dzone.com/articles/most-popular-technologies-for-java-microservices" class="related-link">The Most Popular Technologies for Java Microservices Right Now</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    <div class="container-fluid body trending-article-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="articles-wrap">
+                <div class="ad-container">
+                  <div id="div-gpt-ad-1435246566686-0" class="ads-billboard-article" data-gpt-slot="top" data-google-query-id="CNHQlI6c0pEDFdyqlQIdb-Ex4Q" style="display: none;"><div id="google_ads_iframe_5055/dz2_article_billboard_new_0__container__" style="border: 0pt none; width: 728px; height: 0px;"></div></div>
+                </div>
+
+
+            <div class="article-stream widget-top-border">
+                <div class="content-right-images" style="top: 108px;">
+                  <div id="div-gpt-ad-1435246566686-2" class="sidebar-ad" data-gpt-desktop="true" data-gpt-slot="sidebar1" data-gtm-vis-first-on-screen6133197_649="146" data-gtm-vis-total-visible-time6133197_649="600" data-google-query-id="COeFlY6c0pEDFaxXuAQd7MsfDA" style="display: none;"><div id="google_ads_iframe_5055/dz2_article_halfpage_new_0__container__" style="border: 0pt none; width: 300px; height: 250px;"></div></div>
+                    <div class="trending-separator"></div>
+                    <div class="trending">
+                      <h3>Trending</h3>
+                      <ul>
+                          <li class="item">
+                            <a href="https://dzone.com/articles/a2a-mcp-agent-ai-communication-evolution" class="trending-link" target="_self">From History to the Future of AI Communication—IPC to MCP and A2A</a>
+                          </li>
+                          <li class="item">
+                            <a href="https://dzone.com/articles/the-tinker-and-the-tool-lessons-learned-for-using" class="trending-link" target="_self">The Tinker and the Tool: Lessons Learned for Using AI in Daily Development</a>
+                          </li>
+                          <li class="item">
+                            <a href="https://dzone.com/articles/iceberg-compaction-and-fine-grained-access-control" class="trending-link" target="_self">Iceberg Compaction and Fine-Grained Access Control: Performance Challenges and Solutions</a>
+                          </li>
+                          <li class="item">
+                            <a href="https://dzone.com/articles/connect-rabbitmq-using-scala" class="trending-link" target="_self">Connect to RabbitMQ Using Scala, Play and Akka</a>
+                          </li>
+                      </ul>
+                    </div>
+                </div>
+                <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "headline": "7 Awesome Libraries for Java Unit and Integration Testing",
+                    "author": [{"image":{"@type":"ImageObject","caption":"Marco Behler","url":"https://secure.gravatar.com/avatar/067a1c7988713c7fb6572bc780fd5135?d=identicon&r=PG"},"@type":"Person","name":"Marco Behler","description":"Hi, I'm Marco. Say hello, I'd like to get in touch! twitter: @MarcoBehler","url":"https://dzone.com/users/1246645/marcobehler.html"}],
+                    "audience": "software developers",
+                    "keywords": "",
+                    "timeRequired": "PT4M",
+                    "commentCount": 3,
+                    "wordCount": "819",
+                    "accessMode": "textual, visual",
+                    "datePublished": "2023-01-11T00:00:00Z",
+                    
+                    "articleSection": "",
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "DZone",
+                      "url": "https://dzone.com",
+                      "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://dzone.com/themes/dz20/images/dz_logo_2021_cropped.png"
+                      }
+                    },
+                    "articleBody": "Looking to improve your unit and integration tests? I made a short video giving you an overview of 7 libraries that I regularly use when writing any sort of tests in Java, namely: AssertJAwaitilityMockitoWiserMemoryfilesystemWireMockTestcontainers What’s in the Video? The video gives a short overview of how to use the tools mentioned above and how they work. In order of appearance: AssertJ JUnit comes with its own set of assertions (i.e., assertEquals) that work for simple use cases but are quite cumbersome to work with in more realistic scenarios. AssertJ is a small library giving you a great set of fluent assertions that you can use as a direct replacement for the default assertions. Not only do they work on core Java classes, but you can also use them to write assertions against XML or JSON files, as well as database tables! // basic assertions assertThat(frodo.getName()).isEqualTo(\"Frodo\"); assertThat(frodo).isNotEqualTo(sauron); // chaining string specific assertions assertThat(frodo.getName()).startsWith(\"Fro\") .endsWith(\"do\") .isEqualToIgnoringCase(\"frodo\"); (Note: Source Code from AssertJ) Awaitility Testing asynchronous workflows is always a pain. As soon as you want to make sure that, for example, a message broker received or sent a specific message, you'll run into race condition problems because your local test code executes faster than any asynchronous code ever would. Awaitility to the rescue: it is a small library that lets you write polling assertions, in a synchronous manner! @Test public void updatesCustomerStatus() { // Publish an asynchronous message to a broker (e.g. RabbitMQ): messageBroker.publishMessage(updateCustomerStatusMessage); // Awaitility lets you wait until the asynchronous operation completes: await().atMost(5, SECONDS).until(customerStatusIsUpdated()); ... } (Note: Source Code from Awaitility) Mockito There comes a time in unit testing when you want to make sure to replace parts of your functionality with mocks. Mockito is a battle-tested library to do just that. You can create mocks, configure them, and write a variety of assertions against those mocks. To top it off, Mockito also integrates nicely with a huge array of third-party libraries, from JUnit to Spring Boot. // mock creation List mockedList = mock(List.class); // or even simpler with Mockito 4.10.0+ // List mockedList = mock(); // using mock object - it does not throw any \"unexpected interaction\" exception mockedList.add(\"one\"); mockedList.clear(); // selective, explicit, highly readable verification verify(mockedList).add(\"one\"); verify(mockedList).clear(); (Note: Source Code from Mockito) Wiser Keeping your code as close to production and not just using mocks for everything is a viable strategy. When you want to send emails, for example, you neither need to completely mock out your email code nor actually send them out via Gmail or Amazon SES. Instead, you can boot up a small, embedded Java SMTP server called Wiser. Wiser wiser = new Wiser(); wiser.setPort(2500); // Default is 25 wiser.start(); Now you can use Java's SMTP API to send emails to Wiser and also ask Wiser to show you what messages it received. for (WiserMessage message : wiser.getMessages()) { String envelopeSender = message.getEnvelopeSender(); String envelopeReceiver = message.getEnvelopeReceiver(); MimeMessage mess = message.getMimeMessage(); // now do something fun! } (Note: Source Code from Wiser on GitHub) Memoryfilesystem If you write a system that heavily relies on files, the question has always been: \"How do you test that?\" File system access is somewhat slow, and also brittle, especially if you have your developers working on different operating systems. Memoryfilesystem to the rescue! It lets you write tests against a file system that lives completely in memory, but can still simulate OS-specific semantics, from Windows to macOS and Linux. try (FileSystem fileSystem = MemoryFileSystemBuilder.newEmpty().build()) { Path p = fileSystem.getPath(\"p\"); System.out.println(Files.exists(p)); } (Note: Source Code from Memoryfilesystem on GitHub) WireMock How to handle flaky 3rd-party REST services or APIs in your tests? Easy! Use WireMock. It lets you create full-blown mocks of any 3rd-party API out there, with a very simple DSL. You can not only specify the specific responses your mocked API will return, but even go so far as to inject random delays and other unspecified behavior into your server or to do some chaos monkey engineering. // The static DSL will be automatically configured for you stubFor(get(\"/static-dsl\").willReturn(ok())); // Instance DSL can be obtained from the runtime info parameter WireMock wireMock = wmRuntimeInfo.getWireMock(); wireMock.register(get(\"/instance-dsl\").willReturn(ok())); // Info such as port numbers is also available int port = wmRuntimeInfo.getHttpPort(); (Note: Source Code from WireMock) Testcontainers Using mocks or embedded replacements for databases, mail servers, or message queues is all nice and dandy, but nothing beats using the real thing. In comes Testcontainers: a small library that allows you to boot up and shut down any Docker container (and thus software) that you need for your tests. This means your test environment can be as close as possible to your production environment. @Testcontainers class MixedLifecycleTests { // will be shared between test methods @Container private static final MySQLContainer MY_SQL_CONTAINER = new MySQLContainer(); // will be started before and stopped after each test method @Container private PostgreSQLContainer postgresqlContainer = new PostgreSQLContainer() .withDatabaseName(\"foo\") .withUsername(\"foo\") .withPassword(\"secret\"); (Note: Source Code from Testcontainers) Enjoy the video!",
+                    "mainEntityOfPage": {
+                      "@type": "WebPage",
+                      "@id": "https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration"
+                    },
+                    "image": {
+                      "@type": "ImageObject",
+                      "url": "https://dz2cdn1.dzone.com/storage/article-thumb/16636966-thumb.jpg"
+                    }
+                  }
+                </script>
+
+	<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "DZone",
+            "item": "https://dzone.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Software Design and Architecture",
+            "item": "https://dzone.com/software-design-and-architecture"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Integration",
+            "item": "https://dzone.com/integration"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "7 Awesome Libraries for Java Unit and Integration Testing",
+            "item": "https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration"
+          }
+      ]
+    }
+
+	</script>
+
+              <article>
+                <div class="content">
+                  <div class="header">
+	<ol class="breadcrumb">
+				<li class="server"><a href="https://dzone.com/">DZone</a></li>
+				<li class="server"><a href="https://dzone.com/software-design-and-architecture">Software Design and Architecture</a></li>
+				<li class="server"><a href="https://dzone.com/integration">Integration</a></li>
+				<li class="active server">7 Awesome Libraries for Java Unit and Integration Testing</li>
+	</ol>
+
+
+                    <div class="header-title">
+                      <div class="title">
+                        <h1 class="article-title">7 Awesome Libraries for Java Unit and Integration Testing</h1>
+                      </div>
+
+                      <div class="subhead">
+                        <h3>Want to improve your Java unit and integration tests? Here are seven libraries that you might find useful in your day-to-day work.</h3>
+                      </div>
+
+
+                      <div class="publish-meta">
+                        By<span style="user-select: none;">&nbsp;</span>
+  <div class="article-author-meta">
+    <img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/thumbnail" class="avatar" alt="Marco Behler user avatar" width="40">
+    <div class="author-info">
+      <span class="author-name">
+        <a href="https://dzone.com/users/1246645/marcobehler.html" rel="nofollow" data-core-user="false">Marco Behler</a>
+      </span>
+    </div>
+
+
+
+    ·
+  </div>
+                        <span class="author-date">
+                          Jan. 11, 23
+                        </span>
+                        ·
+                        <span>Tutorial</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="author-n-useraction">
+                    <div class="like action" x-data="engagementModal(articleId)">
+                      <span id="activity-like-icon" class="dz-like icon-thumbs-up" x-on:click="updateStore()"></span>
+                      <span class="action-label like-text" x-on:click="open()">
+                        <span>Likes</span>
+                        <span id="activity-like-counter" class="like-count">(22)</span>
+                      </span>
+<template x-teleport="body" data-teleport-template="true"></template>                    </div>
+
+                    <div class="action comment-action">
+                      <span class="comment">
+                        <i class="icon-comment"></i>
+                        <span class="action-label">Comment</span>
+                        <span id="activity-comment-counter" class="comment-count">(3)</span>
+                      </span>
+                    </div>
+
+                    <div class="save action">
+                      <div id="activity-save-icon" class="save icon-star-empty">
+                        <span id="activity-save-text" class="action-label">Save</span>
+                      </div>
+                    </div>
+
+                    <div class="tweet action">
+                      <a id="tweet-link" href="https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration" class="title" target="_blank">
+                        <span><i class="icon-twitter"></i></span>
+                        <span class="action-label">Tweet</span>
+                      </a>
+                    </div>
+
+                    <div class="linkedin action">
+                      <a id="linkedin-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration" class="title" target="_blank">
+                        <span><i class="icon-linkedin-1"></i></span>
+                        <span class="action-label">Share</span>
+                      </a>
+                    </div>
+
+                    <div class="right-most">
+                      <div id="activity-view-container" class="article-views action">
+                        <i class="icon-eye"></i>
+                        <span class="action-label view-count">13.1K Views</span>
+                      </div>
+                    </div>
+                  </div>
+
+                      <div class="signin-prompt">
+                        <p>Join the DZone community and get the full member experience.</p>
+                        <a id="article-signin-prompt" href="https://dzone.com/static/registration.html">Join For Free</a>
+                      </div>
+                      <div class="arrow-down"></div>
+
+                    <div id="top-bumper-container"><div id="div-gpt-ad-1435246566686-3" class="article-bumper article-bumper-top" data-gpt-desktop="true" data-gpt-slot="topBumper" style="max-height: 250px; overflow: hidden;" data-google-query-id="CJOWhbS10pEDFQg4uQYdCzwoMg"><div id="google_ads_iframe_5055/dz2_bumper_text_ad_0__container__" style="border: 0pt none; display: inline-block; width: 100%; height: auto;"><iframe frameborder="0" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/container.html" id="google_ads_iframe_5055/dz2_bumper_text_ad_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="0" height="103" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="private-state-token-redemption;attribution-reporting" aria-label="Advertisement" tabindex="0" data-google-container-id="3" style="border: 0px; vertical-align: bottom; min-width: 100%;" data-load-complete="true"></iframe></div></div></div>
+
+                  <div>
+                    <div class="content-html"><p>Looking to improve your unit and integration tests?&nbsp;</p>
+<p>I made a short video giving you an overview of 7 libraries that I regularly use when writing any sort of tests in <a href="https://dzone.com/refcardz/core-java">Java</a>, namely:</p>
+<ul> 
+ <li>AssertJ</li> 
+ <li>Awaitility</li> 
+ <li>Mockito</li> 
+ <li>Wiser</li> 
+ <li>Memoryfilesystem</li> 
+ <li>WireMock</li> 
+ <li>Testcontainers</li> 
+</ul>
+<h2><strong>What’s in the Video?</strong></h2>
+<p>The video gives a short overview of how to use the tools mentioned above and how they work. In order of appearance:</p>
+<h3>AssertJ</h3>
+<p>JUnit comes with its own set of assertions (i.e., <code>assertEquals</code>) that work for simple use cases but are quite cumbersome to work with in more realistic scenarios. &nbsp;AssertJ is a small library giving you a great set of fluent assertions that you can use as a direct replacement for the default assertions. Not only do they work on core Java classes, but you can also use them to write assertions against XML or JSON files, as well as database tables!</p>
+<div class="codeMirror-wrapper" contenteditable="false"> 
+ <div contenteditable="false"> 
+  <div class="codeHeader"> <i class="icon-cancel-circled-1 cm-remove">&nbsp;</i> 
+  </div> 
+  <div class="codeMirror-code--wrapper" data-code="// basic assertions
+assertThat(frodo.getName()).isEqualTo(&quot;Frodo&quot;);
+assertThat(frodo).isNotEqualTo(sauron);
+
+// chaining string specific assertions
+assertThat(frodo.getName()).startsWith(&quot;Fro&quot;)
+                           .endsWith(&quot;do&quot;)
+                           .isEqualToIgnoringCase(&quot;frodo&quot;);" data-lang=""> 
+   <pre><code lang="">// basic assertions
+assertThat(frodo.getName()).isEqualTo("Frodo");
+assertThat(frodo).isNotEqualTo(sauron);
+
+// chaining string specific assertions
+assertThat(frodo.getName()).startsWith("Fro")
+                           .endsWith("do")
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.isEqualToIgnoringCase("frodo");</code></pre> 
+  </div> 
+ </div> 
+</div>
+<p style="text-align: center;"><em>(<strong>Note</strong>: Source Code from <a href="https://assertj.github.io/doc/" rel="noopener noreferrer" target="_blank">AssertJ</a>)</em></p>
+<p><br></p>
+<h3>Awaitility</h3>
+<p>Testing asynchronous workflows is always a pain. As soon as you want to make sure that, for example, a message broker received or sent a specific message, you'll run into race condition problems because your local test code executes faster than any asynchronous code ever would. Awaitility to the rescue: it is a small library that lets you write polling assertions, in a synchronous manner!</p>
+<div class="codeMirror-wrapper" contenteditable="false"> 
+ <div contenteditable="false"> 
+  <div class="codeHeader"> <i class="icon-cancel-circled-1 cm-remove">&nbsp;</i> 
+  </div> 
+  <div class="codeMirror-code--wrapper" data-code="@Test
+public void updatesCustomerStatus() {
+    // Publish an asynchronous message to a broker (e.g. RabbitMQ):
+    messageBroker.publishMessage(updateCustomerStatusMessage);
+
+    // Awaitility lets you wait until the asynchronous operation completes:
+    await().atMost(5, SECONDS).until(customerStatusIsUpdated());
+    ...
+}" data-lang=""> 
+   <pre><code lang="">@Test
+public void updatesCustomerStatus() {
+    // Publish an asynchronous message to a broker (e.g. RabbitMQ):
+    messageBroker.publishMessage(updateCustomerStatusMessage);
+
+    // Awaitility lets you wait until the asynchronous operation completes:
+    await().atMost(5, SECONDS).until(customerStatusIsUpdated());
+    ...
+}</code></pre> 
+  </div> 
+ </div> 
+</div>
+<p style="text-align: center;"><em>(<strong>Note</strong>: Source Code from <a href="http://www.awaitility.org/" rel="noopener noreferrer" target="_blank">Awaitility</a>)</em></p>
+<p><br></p>
+<h3>Mockito</h3>
+<p>There comes a time in unit testing when you want to make sure to replace parts of your functionality with mocks. <a href="https://dzone.com/refcardz/mockito">Mockito</a> is a battle-tested library to do just that. You can create mocks, configure them, and write a variety of assertions against those mocks. To top it off, Mockito also integrates nicely with a huge array of third-party libraries, from JUnit to Spring Boot.</p>
+<div class="codeMirror-wrapper" contenteditable="false"> 
+ <div contenteditable="false"> 
+  <div class="codeHeader"> <i class="icon-cancel-circled-1 cm-remove">&nbsp;</i> 
+  </div> 
+  <div class="codeMirror-code--wrapper" data-code="// mock creation
+List mockedList = mock(List.class);
+// or even simpler with Mockito 4.10.0+
+// List mockedList = mock();
+
+// using mock object - it does not throw any &quot;unexpected interaction&quot; exception
+mockedList.add(&quot;one&quot;);
+mockedList.clear();
+
+// selective, explicit, highly readable verification
+verify(mockedList).add(&quot;one&quot;);
+verify(mockedList).clear();" data-lang=""> 
+   <pre><code lang="">// mock creation
+List mockedList = mock(List.class);
+// or even simpler with Mockito 4.10.0+
+// List mockedList = mock();
+
+// using mock object - it does not throw any "unexpected interaction" exception
+mockedList.add("one");
+mockedList.clear();
+
+// selective, explicit, highly readable verification
+verify(mockedList).add("one");
+verify(mockedList).clear();</code></pre> 
+  </div> 
+ </div> 
+</div>
+<p style="text-align: center;"><em>(<strong>Note</strong>: Source Code from <a href="https://site.mockito.org/" rel="noopener noreferrer" target="_blank">Mockito</a>)</em></p>
+<p><br></p>
+<h3>Wiser</h3>
+<p>Keeping your code as close to production and not just using mocks for everything is a viable strategy. When you want to send emails, for example, you neither need to completely mock out your email code nor actually send them out via Gmail or Amazon SES. Instead, you can boot up a small, embedded Java SMTP server called Wiser.</p>
+<div class="codeMirror-wrapper" contenteditable="false"> 
+ <div contenteditable="false"> 
+  <div class="codeHeader"> <i class="icon-cancel-circled-1 cm-remove">&nbsp;</i> 
+  </div> 
+  <div class="codeMirror-code--wrapper" data-code="Wiser wiser = new Wiser();
+wiser.setPort(2500); // Default is 25
+wiser.start();" data-lang=""> 
+   <pre><code lang="">Wiser wiser = new Wiser();
+wiser.setPort(2500); // Default is 25
+wiser.start();</code></pre> 
+  </div> 
+ </div> 
+</div>
+<p><br></p>
+<p>Now you can use Java's SMTP API to send emails to Wiser and also ask Wiser to show you what messages it received.</p>
+<div class="codeMirror-wrapper" contenteditable="false"> 
+ <div contenteditable="false"> 
+  <div class="codeHeader"> <i class="icon-cancel-circled-1 cm-remove">&nbsp;</i> 
+  </div> 
+  <div class="codeMirror-code--wrapper" data-code="for (WiserMessage message : wiser.getMessages())
+{
+	String envelopeSender = message.getEnvelopeSender();
+	String envelopeReceiver = message.getEnvelopeReceiver();
+
+	MimeMessage mess = message.getMimeMessage();
+
+	// now do something fun!
+}" data-lang=""> 
+   <pre><code lang="">for (WiserMessage message : wiser.getMessages())
+{
+	String envelopeSender = message.getEnvelopeSender();
+	String envelopeReceiver = message.getEnvelopeReceiver();
+
+	MimeMessage mess = message.getMimeMessage();
+
+	// now do something fun!
+}</code></pre> 
+  </div> 
+ </div> 
+</div>
+<p style="text-align: center;"><em>(<strong>Note</strong>: Source Code from <a href="https://github.com/voodoodyne/subethasmtp/blob/master/Wiser.md" rel="noopener noreferrer" target="_blank">Wiser on GitHub</a>)</em></p>
+<p><br></p>
+<h3>Memoryfilesystem</h3>
+<p>If you write a system that heavily relies on files, the question has always been: "How do you test that?" File system access is somewhat slow, and also brittle, especially if you have your developers working on different operating systems. &nbsp;Memoryfilesystem to the rescue! It lets you write tests against a file system that lives completely in memory, but can still simulate OS-specific semantics, from Windows to macOS and Linux.</p>
+<div class="codeMirror-wrapper" contenteditable="false"> 
+ <div contenteditable="false"> 
+  <div class="codeHeader"> <i class="icon-cancel-circled-1 cm-remove">&nbsp;</i> 
+  </div> 
+  <div class="codeMirror-code--wrapper" data-code="try (FileSystem fileSystem = MemoryFileSystemBuilder.newEmpty().build()) {
+  Path p = fileSystem.getPath(&quot;p&quot;);
+  System.out.println(Files.exists(p));
+}" data-lang=""> 
+   <pre><code lang="">try (FileSystem fileSystem = MemoryFileSystemBuilder.newEmpty().build()) {
+  Path p = fileSystem.getPath("p");
+  System.out.println(Files.exists(p));
+}</code></pre> 
+  </div> 
+ </div> 
+</div>
+<p style="text-align: center;"><em>(<strong>Note</strong>: Source Code from <a href="https://github.com/marschall/memoryfilesystem" rel="noopener noreferrer" target="_blank">Memoryfilesystem on GitHub</a>)</em></p>
+<p><br></p>
+<h3>WireMock</h3>
+<p>How to handle flaky 3rd-party REST services or APIs in your tests? Easy! Use WireMock. It lets you create full-blown mocks of any 3rd-party API out there, with a very simple DSL. You can not only specify the specific responses your mocked API will return, but even go so far as to inject random delays and other unspecified behavior into your server or to do some chaos monkey engineering.</p>
+<div class="codeMirror-wrapper" contenteditable="false"> 
+ <div contenteditable="false"> 
+  <div class="codeHeader"> <i class="icon-cancel-circled-1 cm-remove">&nbsp;</i> 
+  </div> 
+  <div class="codeMirror-code--wrapper" data-code="  // The static DSL will be automatically configured for you
+        stubFor(get(&quot;/static-dsl&quot;).willReturn(ok()));
+
+        // Instance DSL can be obtained from the runtime info parameter
+        WireMock wireMock = wmRuntimeInfo.getWireMock();
+        wireMock.register(get(&quot;/instance-dsl&quot;).willReturn(ok()));
+
+        // Info such as port numbers is also available
+        int port = wmRuntimeInfo.getHttpPort();" data-lang=""> 
+   <pre><code lang="">  // The static DSL will be automatically configured for you
+        stubFor(get("/static-dsl").willReturn(ok()));
+
+        // Instance DSL can be obtained from the runtime info parameter
+        WireMock wireMock = wmRuntimeInfo.getWireMock();
+        wireMock.register(get("/instance-dsl").willReturn(ok()));
+
+        // Info such as port numbers is also available
+&nbsp; &nbsp; &nbsp; &nbsp; int port = wmRuntimeInfo.getHttpPort();</code></pre> 
+  </div> 
+ </div> 
+</div>
+<p style="text-align: center;"><em>(<strong>Note</strong>: Source Code from <a href="https://wiremock.org/" rel="noopener noreferrer" target="_blank">WireMock</a>)</em></p>
+<p><br></p>
+<h3>Testcontainers</h3>
+<p>Using mocks or embedded replacements for databases, mail servers, or message queues is all nice and dandy, but nothing beats using the real thing. In comes <a href="https://dzone.com/articles/testcontainers-from-zero-to-hero-video">Testcontainers</a>: a small library that allows you to boot up and shut down any <a href="https://dzone.com/refcardz/getting-started-with-docker-1">Docker</a> container (and thus software) that you need for your tests. This means your test environment can be as close as possible to your production environment.</p>
+<div class="codeMirror-wrapper newest" contenteditable="false"> 
+ <div contenteditable="false"> 
+  <div class="codeHeader"> <i class="icon-cancel-circled-1 cm-remove">&nbsp;</i> 
+  </div> 
+  <div class="codeMirror-code--wrapper" data-code="@Testcontainers
+class MixedLifecycleTests {
+
+    // will be shared between test methods
+    @Container
+    private static final MySQLContainer MY_SQL_CONTAINER = new MySQLContainer();
+
+    // will be started before and stopped after each test method
+    @Container
+    private PostgreSQLContainer postgresqlContainer = new PostgreSQLContainer()
+        .withDatabaseName(&quot;foo&quot;)
+        .withUsername(&quot;foo&quot;)
+        .withPassword(&quot;secret&quot;);" data-lang=""> 
+   <pre><code lang="">@Testcontainers
+class MixedLifecycleTests {
+
+    // will be shared between test methods
+    @Container
+    private static final MySQLContainer MY_SQL_CONTAINER = new MySQLContainer();
+
+    // will be started before and stopped after each test method
+    @Container
+    private PostgreSQLContainer postgresqlContainer = new PostgreSQLContainer()
+        .withDatabaseName("foo")
+        .withUsername("foo")
+&nbsp; &nbsp; &nbsp; &nbsp; .withPassword("secret");</code></pre> 
+  </div> 
+ </div> 
+</div>
+<p style="text-align: center;"><em>(<strong>Note</strong>: Source Code from <a href="https://www.testcontainers.org/" rel="noopener noreferrer" target="_blank">Testcontainers</a>)</em></p>
+<p><br></p>
+<p>Enjoy the video!</p>
+<p><span class="fr-video fr-deletable fr-fvc fr-dvb fr-draggable fr-active" contenteditable="false" draggable="true"><span class="fr-responsive-iframe fr-draggable" contenteditable="false"><iframe width="640" height="360" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/JVPHSdHViMg.html" frameborder="0" allowfullscreen="" class="fr-draggable" loading="lazy"></iframe></span></span><br></p></div>
+                  </div>
+
+                    <div id="bottom-bumper-container"><div id="div-gpt-ad-1435246566686-4" class="article-bumper article-bumper-bottom" data-gpt-desktop="true" data-gpt-slot="bottomBumper" style="max-height: 250px; overflow: hidden;"></div></div>
+                    <div class="article-tag-pill-container">
+                        <span class="article-tag-pill">Integration testing</span>
+                        <span class="article-tag-pill">Library</span>
+                        <span class="article-tag-pill">Java (programming language)</span>
+                        <span class="article-tag-pill">unit test</span>
+                        <span class="article-tag-pill">Integration</span>
+                    </div>
+
+                    <div class="attribution">
+                      <p>Opinions expressed by DZone contributors are their own.</p>
+                    </div>
+                      <div class="trending-separator goto"></div>
+                      <div class="trending goto">
+                        <h3>Related</h3>
+                        <ul>
+                            <li class="item">
+                              <div class="goto-link related-link" data-goto="/articles/improving-unit-test-maintainability">Improving Unit Test Maintainability</div>
+                            </li>
+                            <li class="item">
+                              <div class="goto-link related-link" data-goto="/articles/improving-java-code-security">Improving Java Code Security</div>
+                            </li>
+                            <li class="item">
+                              <div class="goto-link related-link" data-goto="/articles/defensive-programming-with-klojang-check">Defensive Programming With Klojang Check</div>
+                            </li>
+                            <li class="item">
+                              <div class="goto-link related-link" data-goto="/articles/most-popular-technologies-for-java-microservices">The Most Popular Technologies for Java Microservices Right Now</div>
+                            </li>
+                        </ul>
+                      </div>
+                </div>
+              </article>
+            </div>
+
+              <div id="div-gpt-ad-1435246566686-11" class="ads-bottom-leaderboard" data-gpt-slot="bottom"></div>
+              <div class="layout-card widget-top-border partner-resources-block" style="width:100%; margin-bottom: 1em;">
+                <div class="main-container">
+                  <div class="featured-header">
+                    <h2>
+                      <span>Partner Resources</span>
+                    </h2>
+                  </div>
+                  <div class="partner-resources-container">
+                    <div id="div-gpt-ad-1435246566686-5" class="resource-block" data-gpt-slot="partner" data-gpt-position="pr1"></div>
+                    <div id="div-gpt-ad-1435246566686-6" class="resource-block" data-gpt-slot="partner" data-gpt-position="pr2"></div>
+                    <div id="div-gpt-ad-1435246566686-7" class="resource-block" data-gpt-slot="partner" data-gpt-position="pr3"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="bottom-sticky-ad-container">
+        <span class="bottom-sticky-ad-close" title="close" x-on:click="$el.parentElement.classList.add(&#39;closed&#39;)">×</span>
+        <div id="div-gpt-ad-1635294790718-12" class="bottom-sticky-ad" data-gpt-slot="bottomStickyFooter" data-google-query-id="CLqClY6c0pEDFZ1auAQdww4Fwg" style="display: none;"><div id="google_ads_iframe_5055/sticky_footer_leaderboard_0__container__" style="border: 0pt none; width: 728px; height: 66px;"></div></div>
+      </div>
+
+    <div class="modal fade bd-example-modal-lg" id="modal-message" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="comments-overlay"></div>
+<div id="comment-box">
+  <div class="comment-box-wrapper">
+    <div id="comment-input-editor"></div>
+  </div>
+  <div class="info hidden"></div>
+  <div class="comments-content" style="display: none;">
+    <div class="comment-header">
+      <hr>
+      <span class="icon-comment">
+        <span class="numOfComments"></span> Comments
+      </span>
+    </div>
+    <div class="comments"></div>
+  </div>
+</div>
+
+<script async="">var articleTitle = '7 Awesome Libraries for Java Unit and Integration Testing';
+var articleUrl = 'https://dzone.com/articles/7-awesome-libraries-for-java-unit-amp-integration';
+
+var retweetLink = document.querySelector('#tweet-link');
+
+function retweet(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    var twitter = 'https://twitter.com/intent/tweet';
+    var params = '?text=' + encodeURIComponent(articleTitle) + '&url=' + articleUrl + '&ref=dzone.com&via=DZoneInc';
+    var win = window.open(twitter + params, '_blank');
+    win.focus();
+}
+
+retweetLink.addEventListener('click', retweet);
+
+function showStatusMessage(options) {
+  var modal = document.getElementById('modal-message');
+
+  if(modal) {
+    modal.classList.add(options.type);
+    var modalBody = modal.querySelector('.modal-content .modal-body');
+    var modalHeader = modal.querySelector('.modal-content .modal-header');
+
+    modalHeader.innerText = options.header ? options.header : '';
+    modalBody.innerText = options.body ? options.body : '';
+
+    $(modal).modal('show');
+
+    $(modal).on('hidden.bs.modal', function () {
+      modal.classList.remove(options.type);
+    });
+  }
+}
+
+function showConfirmMessage(options) {
+  var modal = document.getElementById('modal-message');
+
+  if(modal) {
+    modal.classList.add(options.type);
+    var modalBody = modal.querySelector('.modal-content .modal-body');
+    var modalHeader = modal.querySelector('.modal-content .modal-header');
+
+    modalHeader.innerText = options.header ? options.header : '';
+    modalBody.innerText = options.body ? options.body : '';
+
+    if (options.textarea) {
+      var textareaDiv = document.createElement('div');
+      var textareaLabel = document.createElement('label');
+      textareaLabel.setAttribute('for', 'modal-textarea');
+      textareaLabel.innerText = options.textarea.label;
+
+      var textarea = document.createElement('textarea');
+      textarea.id = 'modal-textarea';
+      textarea.placeholder = (options.textarea.placeholder || '');
+      textarea.setAttribute('rows', (options.textarea.rows || 3));
+      textarea.classList.add('form-control', 'not-resizable');
+
+      if (options.textarea.maxlength) {
+        textarea.maxLength = options.textarea.maxlength;
+      }
+
+      textareaDiv.appendChild(textareaLabel);
+      textareaDiv.appendChild(textarea);
+      modalBody.appendChild(textareaDiv);
+    }
+
+    var btnContainer = document.createElement('div');
+    btnContainer.classList.add('btn-container');
+
+    var noBtn = document.createElement('button');
+    noBtn.innerText = options.noBtnText ? options.noBtnText : 'No';
+    noBtn.classList.add('no-btn');
+
+    var yesBtn = document.createElement('button');
+    yesBtn.innerText = options.yesBtnText ? options.yesBtnText : 'Yes';
+    yesBtn.classList.add('yes-btn');
+
+    btnContainer.appendChild(noBtn);
+    btnContainer.appendChild(yesBtn);
+
+    modalBody.appendChild(btnContainer);
+
+    $(modal).modal('show');
+
+    $(noBtn).one('click', function() {
+      $(modal).modal('hide');
+
+      if(options.noCallback) {
+        $(modal).one('hidden.bs.modal', function () {
+          options.noCallback();
+        });
+      }
+    });
+
+    $(yesBtn).one('click', function() {
+      $(modal).modal('hide');
+
+      if(options.yesCallback) {
+        $(modal).one('hidden.bs.modal', function () {
+          options.yesCallback();
+        });
+      }
+    });
+
+    $(modal).on('hidden.bs.modal', function () {
+      modal.classList.remove(options.type);
+    });
+  }
+}
+
+function getSuspensionBody() {
+  return 'We regret to inform you that your DZone account has been suspended for violating our Guidelines. ' +
+      'Please reach out to editors@dzone.com if you would like additional information.';
+}</script>
+<style>.engagement-overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgb(0, 0, 0, 0.5);
+	z-index: 10000;
+}
+
+.engagement-modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+
+.engagement-modal .inner {
+	background-color: white;
+	border-radius: 0.5em;
+	margin: auto;
+	border: 1px solid #cccccc;
+}
+
+.engagement-modal .header {
+	padding: 20px 50px 10px 30px;
+	position: relative;
+}
+
+.engagement-modal .title {
+	font-size: 20px;
+	font-weight: bold;
+	color: #333333;
+}
+
+.engagement-modal .title:hover {
+	text-decoration: none;
+}
+
+.engagement-modal .close {
+	font-size: 18px;
+	position: absolute;
+	top: 18px;
+	right: 20px;
+	width: 32px;
+	height: 32px;
+	background: none;
+	border: none;
+	opacity: 0.8;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.engagement-modal .close:hover {
+	background-color: rgba(146, 148, 151, 0.2);
+	color: #000;
+	border-radius: 50%;
+}
+
+.engagement-modal .close:after {
+	content: '\2715';
+}
+
+.engagement-modal .content {
+	padding: 0 30px 20px;
+	width: min(450px, 90vw);
+	height: min(450px, 90vw);
+	scrollbar-width: thin;
+	overflow: auto;
+	overscroll-behavior: contain;
+}
+
+.engagement-modal .loading-screen,
+.engagement-modal .content .center-screen {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	font-size: 18px;
+}
+
+.engagement-modal .content .center-screen a {
+	color: var(--acc-ffffff-blue-1);
+	font-weight: bold;
+}
+
+.engagement-modal .loading-screen i {
+	font-size: 24px;
+}
+
+.engagement-modal .media-left,
+.engagement-modal .media-right {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.engagement-modal .media-left {
+	padding-right: 10px;
+}
+
+.engagement-modal .media-right {
+	padding-left: 10px;
+}
+
+.engagement-modal .media a {
+	color: black;
+	font-size: 16px;
+}
+
+.engagement-modal .avatar {
+	border-radius: 50%;
+}
+
+.engagement-modal .footer {
+	margin: 20px 0 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: unset !important;
+	border-top: none !important;
+}
+
+.engagement-modal .footer .btn {
+	border: 1px solid transparent;
+}
+
+.engagement-modal .footer .btn-primary {
+	color: #fff;
+	border-color: #2e6da4;
+}
+
+.engagement-modal .footer button {
+	background-color: var(--acc-ffffff-blue-2);
+	padding: 6px 12px;
+	border-radius: 4px;
+}
+
+.engagement-modal .footer button:hover {
+	filter: brightness(1.2);
+}
+
+@keyframes anim-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+.engagement-modal .anim-spin {
+	display: inline-block;
+	animation: anim-spin 2s infinite linear;
+}</style>
+<script>document.addEventListener('alpine:init', () => {
+	Alpine.data('engagementModal', (nodeId) => ({
+
+		nodeId: null,
+
+		init() {
+			this.nodeId = nodeId;
+		},
+
+		open() {
+			this.updateStore();
+			this.$store.article.engagement.open = true;
+			if (this.$store.article.engagement.page === 1 && !this.$store.article.engagement.unauthorized) {
+				this.$store.article.engagement.initializing = true;
+				this.fetchEngagements();
+			}
+		},
+
+		close() {
+			if (this.$store.article.engagement.open) {
+				this.$store.article.engagement.open = false;
+			}
+		},
+
+		updateStore() {
+			if (this.nodeId !== this.$store.article.id) {
+				this.$store.article.engagement.reset();
+				this.$store.article.id = this.nodeId;
+			}
+		},
+
+		fetchEngagements() {
+			if (this.$store.article.engagement.loading || !this.$store.article.engagement.additional) {
+				return;
+			}
+
+			this.$store.article.engagement.loading = true;
+			this.$store.global.getFromService('/services/nodes/' + this.$store.article.id + '/engagements?page=' + this.$store.article.engagement.page)
+				.then(res => {
+					res.json().then(data => {
+						for (let user of data.engagements) {
+							this.$store.article.engagement.users.push(user);
+						}
+
+						this.$store.article.engagement.additional = data.additional;
+						this.$store.article.engagement.page++;
+					});
+				})
+				.catch(err => {
+					err.json().then(data => {
+						if (data.error?.code === 4011) {
+							this.$store.article.engagement.unauthorized = true;
+						} else {
+							this.$store.modal_engagement_error.open();
+						}
+					});
+				})
+				.finally(() => {
+					// Allow the loader to gracefully exit
+					setTimeout(() => {
+						this.$store.article.engagement.loading = false;
+						this.$store.article.engagement.initializing = false;
+					}, 200);
+				});
+		},
+
+		formatJobData(user) {
+			if (user.profile.jobTitle && user.profile.companyName) {
+				return user.profile.jobTitle + ', ' + user.profile.companyName;
+			}
+
+			if (user.profile.jobTitle) {
+				return user.profile.jobTitle;
+			}
+
+			if (user.profile.companyName) {
+				return user.profile.companyName;
+			}
+
+			return null;
+		},
+
+		isDataUnavailable() {
+			return !this.$store.article.engagement.initializing && !this.$store.article.engagement.users.length;
+		},
+
+		isFooterShowing() {
+			return !this.$store.article.engagement.initializing
+				&& this.$store.article.engagement.additional
+				&& this.$store.article.engagement.page > 1;
+		}
+	}));
+});
+</script>
+
+    <div class="alpine-overlay" x-show="$store.modal_engagement_error._open" style="display: none;">
+        <div id="modal_engagement_error" class="alpine-modal" role="dialog" tabindex="-1" x-show="$store.modal_engagement_error._open" x-on:click.self="$store.modal_engagement_error.dismissible &amp;&amp; $store.modal_engagement_error.close()" x-transition="" style="display: none;">
+            <div class="dz-style modal-inner centered relative">
+                <button x-show="$store.modal_engagement_error.closeable" class="btn-close" x-on:click="$store.modal_engagement_error.close()" aria-label="Close">
+                </button>
+
+                <div x-show="$store.modal_engagement_error.title" class="modal-header p-sm mt-sm mb-md">
+                    <div class="title " x-text="$store.modal_engagement_error.title">Oops! Something Went Wrong</div>
+                </div>
+
+                <div class="modal-content py-md px-lg has-top-border" x-bind:class="{ &#39;has-top-border&#39;: $store.modal_engagement_error.title }">
+                    <p x-show="$store.modal_engagement_error.bodyText" class="my-none" x-text="$store.modal_engagement_error.bodyText" style="display: none;"></p>
+  <p>The likes didn't load as expected. Please refresh the page and try again.</p>
+                </div>
+
+                <div x-show="$store.modal_engagement_error.options.length" class="modal-footer p-sm">
+                    <template x-for="option in $store.modal_engagement_error.options"></template><button x-show="option.canDisplay" x-text="option.text" type="button" x-bind:id="&#39;button_modal_engagement_error_&#39; + option.index" x-bind:class="option.classList" x-on:click="option.onClick" x-bind:disabled="option.isDisabled" id="button_modal_engagement_error_0" class="btn btn-primary hov-brighten">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("alpine:init", () => {
+            Alpine.store("modal_engagement_error", {
+                _open: false,
+                title: "Oops! Something Went Wrong",
+                bodyText: null,
+                options: [{"action":"dismiss","text":"Close"}],
+                closeable: true,
+                dismissible: true,
+                open(data) {
+                    if (data) {
+                        if (data.title) {
+                            this.title = data.title;
+                        }
+                        if (data.bodyText) {
+                            this.bodyText = data.bodyText;
+                        }
+                        if (data.options) {
+                            this.options = data.options;
+                        }
+                        if (data.dismissAfterMs) {
+                            setTimeout(() => this._open = false, data.dismissAfterMs);
+                        }
+                    }
+                    this.updateOptions();
+                    this._open = true;
+                },
+                close() {
+                    // Manually click the buttons in which should run on dismiss.
+                    // This is to keep the context. Calling this[option.action]() will not work.
+                    for (let option of this.options) {
+                        if (option.runOnDismiss) {
+                            const element = document.querySelector('#button_modal_engagement_error_' + option.index);
+                            element.click();
+                        }
+                    }
+                    this._open = false;
+                },
+                updateOptions() {
+                    const btnStyle = this.options.length === 2 ? ' btn-default' : '';
+                    this.options = this.options.map((o, idx) => ({
+                        ...o,
+                        index: idx,
+                        classList: o.classList ? o.classList : (idx === 0 ? "btn btn-primary hov-brighten" : "btn hov-underline" + btnStyle),
+                        onClick: function() {
+                            if (o.action !== "dismiss") {
+                                this[o.action]();
+                            }
+                            this.$store["modal_engagement_error"].close();
+                        },
+                        isDisabled: function() {
+                            return Object.hasOwn(o, 'disabled') && this[o.disabled]();
+                        },
+                        canDisplay: function() {
+                            return !Object.hasOwn(o, 'condition') || this[o.condition]();
+                        }
+                    }));
+                },
+                init() {
+                    this.updateOptions();
+                }
+            });
+        });
+    </script>
+
+<link rel="stylesheet" media="all" href="./7 Awesome Libraries for Java Unit and Integration Testing_files/styles(3).css">
+
+<div id="ftl-footer">
+  <div class="container-fluid footerOuter" style="padding-bottom: 90px;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container">
+          <div class="row footer">
+            <div class="col-md-12 footerWidget">
+              <div class="row footerContainer footer">
+                <div class="left col-xs-12 col-sm-7">
+                  <div class="col-xs-12 social-media-icons footer-mobile">
+                    <ul class="icons-only">
+                      <li class="rss-icon" id="rss-footer-1">
+                        <a href="https://dzone.com/pages/feeds" target="_blank" rel="noreferrer noopener">
+                          <i class="icon-rss-1"></i>
+                        </a>
+                      </li>
+                      <li class="twitter-icon">
+                        <a href="https://twitter.com/DZoneInc" target="_blank" rel="noreferrer noopener">
+                          <i class="icon-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="facebook-icon">
+                        <a href="https://www.facebook.com/DZoneInc" target="_blank" rel="noreferrer noopener">
+                          <i class="icon-facebook-1"></i>
+                        </a>
+                      </li>
+                      <li class="linkedin-icon">
+                        <a href="https://www.linkedin.com/company/dzone/" target="_blank" rel="noreferrer noopener">
+                          <i class="icon-linkedin-1"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="top-section col-xs-12">
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="section-header">ABOUT US</p>
+                      <ul class="link-group">
+                        <li><a href="https://dzone.com/pages/about" rel="noreferrer noopener">About DZone</a></li>
+                        <li><a href="mailto:support@dzone.com" rel="noreferrer noopener">Support and feedback</a></li>
+                        <li><a href="https://dzone.com/pages/dzone-community-research">Community research</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="section-header">ADVERTISE</p>
+                      <ul class="link-group">
+                        <li><a href="https://advertise.dzone.com/" target="_blank" rel="noreferrer noopener">Advertise with DZone</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="bottom-section col-xs-12">
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="section-header">CONTRIBUTE ON DZONE</p>
+                      <ul class="bottom-top-list link-group">
+                        <li><a href="https://dzone.com/articles/dzones-article-submission-guidelines">Article Submission Guidelines</a></li>
+                        <li><a href="https://dzone.com/pages/contribute" rel="noreferrer noopener">Become a Contributor</a></li>
+                        <li><a href="https://dzone.com/pages/core" rel="noreferrer noopener">Core Program</a></li>
+                        <li><a href="https://dzone.com/writers-zone" rel="noreferrer noopener">Visit the Writers' Zone</a></li>
+                      </ul>
+
+                      <p class="section-header">LEGAL</p>
+                      <ul class="link-group">
+                        <li><a href="https://technologyadvice.com/terms-conditions/" target="_blank" rel="noopener" referrerpolicy="no-referrer-when-downgrade">Terms of Service</a></li>
+                        <li><a href="https://technologyadvice.com/privacy-policy/" target="_blank" rel="noopener" referrerpolicy="no-referrer-when-downgrade">Privacy Policy</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="section-header">CONTACT US</p>
+                      <ul class="link-group">
+                        <li>3343 Perimeter Hill Drive</li>
+                        <li>Suite 215</li>
+                        <li>Nashville, TN 37211</li>
+                        <li><a href="mailto:support@dzone.com" rel="noreferrer noopener">support@dzone.com</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="right col-xs-12 col-sm-5">
+
+                  <p class="connect-text">Let's be friends:</p>
+                  <div class="col-xs-12 social-media-icons footer-wide">
+                    <ul class="icons-only">
+                      <li class="rss-icon" id="rss-footer-1">
+                        <a href="https://dzone.com/pages/feeds" target="_blank" rel="noreferrer noopener">
+                          <i class="icon-rss-1"></i>
+                        </a>
+                      </li>
+                      <li class="twitter-icon">
+                        <a href="https://twitter.com/DZoneInc" target="_blank" rel="noreferrer noopener">
+                          <i class="icon-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="facebook-icon">
+                        <a href="https://www.facebook.com/DZoneInc" target="_blank" rel="noreferrer noopener">
+                          <i class="icon-facebook-1"></i>
+                        </a>
+                      </li>
+                      <li class="linkedin-icon">
+                        <a href="https://www.linkedin.com/company/dzone/" target="_blank" rel="noreferrer noopener">
+                          <i class="icon-linkedin-1"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+	  const articleId = 3300927;
+	  const likes = 22;
+	  const assetDomain = 'https://dz2cdn1.dzone.com';
+	  const codemirrorVars = {
+		  modeURI: 'https://dz2cdn1.dzone.com/themes/dz20/lib/codemirror/mode/',
+		  requiredScripts: [
+			  'https://dz2cdn1.dzone.com/themes/dz20/lib/codemirror/lib/codemirror.js',
+			  'https://dz2cdn1.dzone.com/themes/dz20/lib/codemirror/addon/mode/multiplex.js',
+			  'https://dz2cdn1.dzone.com/themes/dz20/lib/codemirror/mode/meta.js'
+		  ]
+	  };
+
+	  const gptTags = {
+		  'zone': 'Integration',
+		  'topicTag': 'Integration testing,Library,java,unit test,integration',
+		  'company': '',
+		  'siteSection': 'Zones',
+		  'articleCategory': 'tutorial',
+		  'nodeID': '3300927',
+		  'authorID': '1246645',
+		  'publishYear': '2023',
+		  'publishMonth': '01',
+		  'jobRole': '',
+		  'companySize': '',
+		  'env': 'prod'
+	  };
+
+	  const minCommentChar = 10;
+  </script>
+  <script async="">const width = window.innerWidth;
+const gamInstance = 5055;
+
+const metadata = {
+    'top': {
+        'position': 'top',
+        'slot': width >= 768 ? 'dz2_article_billboard_new' : 'dz2_mobile_leaderboard',
+        'size': width >= 1024 ? [[728, 90], [970, 90], [970, 66]]
+            : width >= 768 ? [728, 90] : [[320, 50], [300, 50]]
+    },
+    'sponsor': {
+        'position': 'sidebar',
+        'slot': 'dz2_sponsor_logo',
+        'size': [[100, 100], [300, 100]]
+    },
+    'sponsorLogo': {
+        'position': 'zoneHomepage',
+        'slot': 'dz2_homepage_sponsor_logo',
+        'size': [135, 45],
+	    'refreshable': false
+    },
+    'sidebar1': {
+        'position': 'sidebar',
+        'slot': 'dz2_article_halfpage_new',
+        'size': [[300, 250], [300, 600], [160, 600]]
+    },
+    'topBumper': {
+        'position': 'top',
+        'slot': 'dz2_bumper_text_ad',
+        'size': 'fluid',
+        'maxHeight': '250px'
+    },
+    'bottomBumper': {
+        'position': 'bottom',
+        'slot': 'dz2_bumper_text_ad',
+        'size': width >= 1024 ? ['fluid', [728, 90]] : 'fluid',
+        'maxHeight': '250px'
+    },
+    'bottom': {
+        'position': 'bottom',
+        'slot': 'dz2_article_leaderboard_3',
+        'size': width >= 1024 ? [[728, 90], [970, 90], [970, 66]]
+            : width >= 768 ? [728, 90] : [[300, 50], [320, 50]]
+    },
+    'bottomStickyFooter': {
+        'position': 'sticky',
+        'slot': 'sticky_footer_leaderboard',
+        'size': width >= 1024 ? [[728, 90], [970, 90], [970, 66], [1000, 90]]
+            : (width >= 768 ? [[728, 90], [300, 50], [320, 50]] : [[300, 50], [320, 50]]),
+        'sticky': true
+    },
+    'partner': {
+        'slot': 'dz2_partner_resource_link',
+        'size': 'fluid'
+    },
+    'branded': {
+        'slot': 'dz2_branded_content',
+        'size': 'fluid',
+	    'refreshable': false
+    },
+    'topicBillboard': {
+        'position': ['top', 'zoneHomepage'],
+        'slot': 'dz2_topic_billboard',
+        'size': width >= 1024 ? [[728, 90], [970, 90], [970, 66]]
+            : width >= 768 ? [728, 90] : [[320, 50], [300, 50]]
+    },
+    'listPageSidebar': {
+        'position': 'sidebar',
+        'slot': 'dz2_list_page_sidebar',
+        'size': [[300, 600], [300, 250], [160, 600]],
+        'minWidthToShow': 1024
+    },
+    'topListPageLeaderboard2': {
+        'position': ['top', 'zoneList'],
+        'slot': 'dz2_list_page_leaderboard_2',
+        'size': width >= 1024 ? [[728, 90], [970, 90], [970, 66]]
+            : width >= 768 ? [728, 90] : [[320, 50], [300, 50]]
+    },
+    'bottomListPageLeaderboard2': {
+        'position': ['bottom', 'zoneList'],
+        'slot': 'dz2_list_page_leaderboard_2',
+        'size': width >= 1024 ? [[728, 90], [970, 90], [970, 66]]
+            : width >= 768 ? [728, 90] : [[320, 50], [300, 50]]
+    },
+    'homepageLeaderboard': {
+        'position': 'top',
+        'slot': 'dz2_homepage_leaderboard',
+        'size': width >= 1024 ? [[728, 90], [970, 90], [970, 66]]
+            : width >= 768 ? [728, 90] : [[320, 50], [300, 50]]
+    },
+    'homepageLeaderboard2': {
+        'position': 'bottom',
+        'slot': 'dz2_homepage_leaderboard_2',
+        'size': width >= 1024 ? [[728, 90], [970, 90], [970, 66]]
+            : width >= 768 ? [728, 90] : [[320, 50], [300, 50]]
+    },
+    'skybox': {
+        'position': 'above nav',
+        'slot': 'dz_skybox',
+        'size': [[5, 5]],
+	    'refreshable': false
+    },
+	'inline': {
+		'position': 'inline',
+		'slot': 'dz2_inline-article-display',
+		'size': width >= 1250 ? [728, 90] : [[300, 250], [320, 50], [300, 50]]
+	}
+};
+
+window.googletag = window.googletag || { cmd: [] };
+
+let lastHeader = null;
+
+const topContainer = document.querySelector('#top-bumper-container');
+const bottomContainer = document.querySelector('#bottom-bumper-container');
+
+function GAM_getPersistentValue(key) {
+    const stored = JSON.parse(localStorage.getItem(key));
+
+    if (!stored) {
+        return null;
+    }
+
+    const { value, expiration } = stored;
+
+    if (expiration && Date.now() >= expiration) {
+        localStorage.removeItem(key);
+        return null;
+    }
+
+    return value;
+}
+
+function GAM_setPersistentValue(key, value, expiration) {
+    // 5 minutes from now
+    if (!expiration) {
+        expiration = Date.now() + 300000;
+    }
+
+    const storedValue = JSON.stringify({
+        value: value,
+        expiration: expiration
+    });
+
+    localStorage.setItem(key, storedValue);
+
+    return value;
+}
+
+function GAM_synchronousRequest(params) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', params.url, false);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    if (typeof params.auth_header !== "undefined") {
+        xhr.setRequestHeader("Authorization", params.auth_header);
+    }
+
+    xhr.send(null);
+    if (xhr.status === 200) {
+        return xhr.responseText;
+    } else {
+        throw new Error('Request failed: ' + xhr.statusText);
+    }
+}
+
+function GAM_fetch_data(params) {
+    let stored_data = GAM_getPersistentValue(params.storage_key);
+
+    if (stored_data === null) {
+        try {
+            const response = GAM_synchronousRequest(params);
+            const data = JSON.parse(response);
+
+            // Store and expire after 30 minutes
+            return GAM_setPersistentValue(params.storage_key, data, Date.now() + 1800000);
+        } catch (error) {
+            console.error('Could not get ' + params.storage_key + ' data: ' + error);
+            return null;
+        }
+    } else {
+        return stored_data;
+    }
+}
+
+function GAM_setUpSixSenseTargeting() {
+    let meData = GAM_fetch_data({
+        url: "https://link.technologyadvice.com/_me",
+        storage_key: "ta_me_data"
+    });
+    let sixSenseData = GAM_fetch_data({
+        url: "https://epsilon.6sense.com/v3/company/details",
+        auth_header: "Token d20a1b0e892442270cbc4cb6801c0160d28af04c",
+        storage_key: "ta_6s_data"
+    });
+
+    function meDataIncludes(i) {
+        return meData.tags.includes(i);
+    }
+
+    if (typeof meData !== "undefined" && meData !== null) {
+        window.googletag.pubads().setTargeting("visitor_id", meData.vid);
+        window.googletag.pubads().setTargeting("user_agent", meData.user_agent);
+
+        var tags_mapping = {
+            "is_datacenter": ["site.is-datacenter"],
+            "is_suspected_bot": ["site.suspected-bad-bot", "site.bad-bot"],
+            "is_ta_user": ["site.is-ta-user"],
+            "is_crawler": ["site.user-agent-blocked"],
+            "is_ad_blocked": ["site.is-ad-blocked"],
+        };
+
+        for (var key in tags_mapping) {
+            if (tags_mapping[key].some(meDataIncludes)) {
+                window.googletag.pubads().setTargeting(key, 'true');
+            }
+        }
+    }
+
+    if (typeof sixSenseData !== "undefined" && sixSenseData !== null) {
+        var segment_ids = [];
+        if (sixSenseData.segments && sixSenseData.segments.ids && sixSenseData.segments.ids.length) {
+            sixSenseData.segments.ids.forEach(function (v) {
+                segment_ids.push(v.toString());
+            });
+        }
+        if (typeof segment_ids !== "undefined" && segment_ids.length > 0) {
+            window.googletag.pubads().setTargeting("segment_ids_6si", segment_ids);
+        }
+    }
+}
+
+if (width >= 1024 && (topContainer || bottomContainer)) {
+    // Dynamically create bumper ad slots for non-mobile devices.
+    // Prevents ugly dividers being rendered on empty ad slots (mobile)
+    const topBumper = document.createElement('div');
+    topBumper.id = 'div-gpt-ad-1435246566686-3';
+    topBumper.classList.add('article-bumper', 'article-bumper-top');
+    topBumper.setAttribute('data-gpt-desktop', 'true');
+    topBumper.setAttribute('data-gpt-slot', 'topBumper');
+
+    topContainer.appendChild(topBumper);
+
+    const bottomBumper = document.createElement('div');
+    bottomBumper.id = 'div-gpt-ad-1435246566686-4';
+    bottomBumper.classList.add('article-bumper', 'article-bumper-bottom');
+    bottomBumper.setAttribute('data-gpt-desktop', 'true');
+    bottomBumper.setAttribute('data-gpt-slot', 'bottomBumper');
+
+    bottomContainer.appendChild(bottomBumper);
+}
+
+if (gptTags.zone) {
+    gptTags.zone = gptTags.zone.replaceAll(/[\s/]/g, '_')
+        .replaceAll(/[^a-zA-Z0-9_]/g, '')
+        .toLowerCase();
+}
+
+makeAds();
+
+function handleSkybox() {
+    const skybox = document.querySelector('div.skybox');
+    if (skybox) {
+        document.body.classList.add('skybox-auto-collapse');
+        // observe classlist changes for offsetting sticky ads
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    let offset = 0;
+                    if (!document.body.classList.contains('skybox-closed') && (
+                        document.body.classList.contains('ccad-skybox-manualcollapse')
+                        || document.body.classList.contains('ccad-skybox-manualexpand')
+                    )) {
+                        offset = skybox.getBoundingClientRect().height;
+                    }
+                    let eligibleAds = [
+                        { element: document.querySelector('.content-right-images'), offset: 108 },
+                        { element: document.querySelector('.trending-sidebar'), offset: 88 },
+                        { element: document.querySelector('.trending'), offset: 88 }
+                    ];
+                    for (let ad of eligibleAds) {
+                        if (ad.element) {
+                            ad.element.style.top = (ad.offset + offset) + 'px';
+                        }
+                    }
+                }
+            });
+        });
+        observer.observe(document.body, { attributes: true });
+    }
+}
+
+function isHeaderEligible(header) {
+	const range = document.createRange();
+	range.setStartAfter(lastHeader);
+	range.setEndBefore(header);
+
+	return range.toString().trim().length >= 600;
+}
+
+function placeInlineAds() {
+	const excludedContent = document.querySelectorAll('#ftl-article.branded-content, #ftl-article.sponsored');
+
+	if (excludedContent.length > 0) {
+		return;
+	}
+
+	const headers = Array.from(document.querySelectorAll('.content-html h2')).splice(1);
+
+	let globalIndex = 12;
+
+	for (let i = 0; i < headers.length; i++) {
+		if (!lastHeader || isHeaderEligible(headers[i])) {
+			const element = document.createElement('div');
+			element.id = 'div-gpt-ad-1435246566686-' + globalIndex;
+			element.classList.add('inline-display');
+			element.setAttribute('data-gpt-slot', 'inline');
+			element.setAttribute('data-gpt-index', (i + 1).toString());
+			headers[i].before(element);
+			lastHeader = element;
+			globalIndex++;
+		}
+	}
+}
+
+function makeAds() {
+    handleSkybox();
+	placeInlineAds();
+
+    window.googletag.cmd.push(function() {
+        const displayIds = [];
+        const containers = document.querySelectorAll('div[data-gpt-slot]');
+
+        for (let container of containers) {
+            const desktop = container.getAttribute('data-gpt-desktop');
+            // Any ad element attributed as only for desktop should not
+            // fetch or render on unsupported devices (width dependent)
+            if (desktop && width < 1024) {
+                continue;
+            }
+
+            const div = container.getAttribute('data-gpt-slot');
+            const position = container.getAttribute('data-gpt-position');
+	        const index = container.getAttribute('data-gpt-index');
+            const meta = metadata[div];
+
+            if (meta.maxHeight) {
+                container.style.maxHeight = meta.maxHeight;
+                container.style.overflow = 'hidden';
+            }
+
+            if (meta.minWidthToShow && width < meta.minWidthToShow) {
+                continue;
+            }
+
+            const id = container.id;
+			const path = gamInstance + '/' + meta.slot + (index ? '-' + index : '');
+            const slot = window.googletag.defineSlot(path, meta.size, id)
+                .setCollapseEmptyDiv(true)
+                .setTargeting('adPosition', (position || meta.position));
+
+            Object.keys(gptTags).forEach(function(key) {
+                slot.setTargeting(key, gptTags[key]);
+            });
+
+			slot.setConfig({
+				targeting: {
+					refreshable: (meta.refreshable ?? true) ? 'true' : 'false',
+					refresh: '0',
+					adrefreshed: 'false'
+				}
+			});
+
+            slot.addService(window.googletag.pubads());
+            displayIds.push({id: id, slot: div});
+		}
+
+		// Disable refresh by line item config
+		window.googletag.pubads().addEventListener("slotRenderEnded", (event) => {
+			if ((window.GPT_NO_REFRESH_LINEITEMS ?? []).includes(event.lineItemId)) {
+				event.slot.setConfig({ targeting: { refreshable: 'false' } });
+			}
+		});
+
+		setInterval(() => {
+			const slots = window.googletag.pubads().getSlots().filter((slot) => {
+				if (slot.getConfig('targeting').targeting.refreshable?.[0] === 'false') {
+					return false;
+				}
+
+				const element = document.getElementById(slot.getSlotElementId());
+
+				if (!element) {
+					return false;
+				}
+
+				const rect = element.getBoundingClientRect();
+				const visible = rect.top < window.innerHeight && rect.bottom > 0;
+
+				if (!visible) {
+					return false;
+				}
+
+				const next = 1 + parseInt(slot.getConfig('targeting').targeting.refresh?.[0] ?? '0');
+				slot.setConfig({ targeting: { refresh: next.toString(), adrefreshed: 'true' } });
+
+				return true;
+			});
+
+			if (slots.length) {
+				window.googletag.pubads().refresh(slots);
+			}
+		}, 30000);
+
+        GAM_setUpSixSenseTargeting();
+
+        window.googletag.pubads().enableLazyLoad({
+            fetchMarginPercent: 100,
+            renderMarginPercent: 100
+        });
+
+        window.googletag.enableServices();
+
+        for (let display of displayIds) {
+            const id = display.id;
+
+            setTimeout(function() {
+                window.googletag.display(id);
+            }, 0);
+        }
+    });
+}
+</script>
+
+  <script async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/f(2).txt"></script>
+
+  <script async="">
+      (function(w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+          var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j,f);
+      })(window, document, 'script', 'dataLayer', 'GTM-K25QL22');
+  </script>
+
+  <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-410289-1', 'auto');
+      ga('require', 'linkid', 'linkid.js');
+      ga('require', 'GTM-TSD9TZP');
+      ga('set', 'siteSpeedSampleRate', 25);
+  </script>
+  <script async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/analytics.js.descarga"></script>
+  <script async="">var analytics = {
+    'dimension1': 'Integration',
+    'dimension2': 'article/tutorial',
+    'dimension3': '2023-01-11',
+    'dimension4': '0',
+    'dimension5': '',
+    'dimension7': 'Integration testing, Library, java, unit test, integration',
+    'dimension8': 'marcobehler',
+    'dimension9': 'undefined',
+    'dimension10': ''
+};
+
+if (window.ga) {
+    Object.keys(analytics).forEach(function(key) {
+        window.ga('set', key, analytics[key]);
+    });
+
+    window.ga('send', 'pageview');
+}</script>
+
+  <script src="./7 Awesome Libraries for Java Unit and Integration Testing_files/jquery.min.js.descarga"></script>
+  <script async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/bootstrap.min.js.descarga"></script>
+
+  <script>
+      function loadScript(src) {
+          return new Promise(function (resolve, reject) {
+              const s = document.createElement('script');
+              s.src = src;
+              s.onload = resolve;
+              s.onerror = reject;
+              document.head.appendChild(s);
+          });
+      }
+
+      function loadStyle(href) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = href;
+          document.head.appendChild(link);
+      }
+
+      function loadScriptsSync(deferred) {
+          var p = Promise.resolve();
+          for (var i = 0; i < deferred.length; i++) {
+              let script = deferred[i];
+              p = p.then(function() {
+                  return loadScript(script);
+              });
+          }
+          return p;
+      }
+
+      function loadStyles() {
+          const deferred = [
+              'https://dz2cdn1.dzone.com/themes/dz20/lib/codemirror/lib/codemirror.css',
+              'https://dz2cdn1.dzone.com/themes/dz20/ftl/comments/styles.css',
+              'https://dz2cdn1.dzone.com/themes/dz20/lib/froala3/css/froala_editor.pkgd.min.css',
+              'https://dz2cdn1.dzone.com/themes/dz20/lib/froala3/css/themes/gray.min.css',
+              'https://dz2cdn1.dzone.com/themes/dz20/ftl/article/mini-profile.css'
+          ];
+
+          for (var i = 0; i < deferred.length; i++) {
+              loadStyle(deferred[i]);
+          }
+      }
+
+      window.addEventListener('load', function(_event) {
+          loadStyles();
+
+          loadScriptsSync([
+            'https://dz2cdn1.dzone.com/themes/dz20/lib/lazysizes.min.js',
+            'https://dz2cdn1.dzone.com/themes/dz20/ftl/article/codeblocks.js',
+            'https://dz2cdn1.dzone.com/themes/dz20/ftl/article/activity-bar.js',
+            'https://dz2cdn1.dzone.com/themes/dz20/lib/froala3/js/froala_editor.pkgd.min.js',
+            'https://dz2cdn1.dzone.com/themes/dz20/ftl/froala/content.js',
+            'https://dz2cdn1.dzone.com/themes/dz20/ftl/comments/content.js',
+            'https://dz2cdn1.dzone.com/themes/dz20/ftl/article/content.js'
+          ]);
+      });
+  </script>
+
+<div class="engagement-overlay" x-show="$store.article.engagement.open &amp;&amp; nodeId === $store.article.id" x-on:keyup.escape.window="close()" data-teleport-target="true" style="display: none;">
+		<div class="engagement-modal">
+			<div class="inner" x-on:click.outside="close()">
+				<div class="header">
+					<div class="title">Likes</div>
+					<button class="close" x-on:click="close()"></button>
+				</div>
+				<div class="content">
+					<div x-show="$store.article.engagement.initializing" class="loading-screen" style="display: none;">
+						<i class="icon icon-spin3 anim-spin"></i>
+					</div>
+					<div x-show="!$store.article.engagement.initializing">
+						<template x-for="user in $store.article.engagement.users" :key="user.id"></template>
+					</div>
+					<div x-show="isDataUnavailable()" class="center-screen">
+						<div x-show="!$store.article.engagement.unauthorized">
+							<div>There are no likes...yet! 👀</div>
+							<div>Be the first to like this post!</div>
+						</div>
+						<div x-show="$store.article.engagement.unauthorized" style="display: none;">
+							<div>It looks like you're not logged in.</div>
+							<div><a href="https://dzone.com/users/login.html">Sign in</a> to see who liked this post!</div>
+						</div>
+					</div>
+					<div x-show="isFooterShowing()" style="display: none;">
+						<div class="footer">
+							<button class="btn btn-primary" x-on:click="fetchEngagements()" x-bind:disabled="$store.article.engagement.loading">
+								Load More
+								<i x-show="$store.article.engagement.loading" class="icon icon-spin3 anim-spin" style="display: none;"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><script id="6senseWebTag" text="" charset="" type="text/javascript" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/01192dc3-157f-4d5a-bea4-02f62692239e.js.descarga"></script> 
+<script id="" text="" charset="" type="text/javascript" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/b65d7d7005337f7bd4bd291d1d48ebb9.js.descarga"></script>
+<script type="text/javascript" id="" charset="">(function(b,c,d){var a=b.createElement("script");a.type="text/javascript";a.src="https://a.omappapi.com/app/js/api.min.js";a.async=!0;a.dataset.user=c;a.dataset.campaign=d;b.getElementsByTagName("head")[0].appendChild(a)})(document,16961,"r5hmbvvpuh6c9bj2mi76");</script>
+<script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g;d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","dyr9vdlv8t");</script><script type="text/javascript" id="" charset="">window[function(d,e){for(var b="",c=0;c<d.length;c++){var a=d[c].charCodeAt();a-=e;b==b;a+=61;a!=c;9<e;a%=94;a+=33;b+=String.fromCharCode(a)}return b}(atob("YlFYendybWt8U20j"),8)]="15ea09908c1685545788";var zi=document.createElement("script");zi.type="text/javascript";zi.async=!0;zi.src=function(d,e){for(var b="",c=0;c<d.length;c++){var a=d[c].charCodeAt();a-=e;b==b;a!=c;a+=61;a%=94;a+=33;8<e;b+=String.fromCharCode(a)}return b}(atob("NUFBPUBlWlo3QFlHNlhAMD82PUFAWTA8OlpHNlhBLjRZN0A\x3d"),43);
+"complete"===document.readyState?document.body.appendChild(zi):window.addEventListener("load",function(){document.body.appendChild(zi)});</script><script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","l7xu65at89");</script><script type="text/javascript" id="" charset="">!function(b,e,f,g,a,c,d){b.saq||(a=b.saq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._saq||(b._saq=a),a.push=a,a.loaded=!0,a.version="1.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://tags.srv.stackadapt.com/events.js");saq("ts","3WSBKLflxq7D0ZW38xEGLA");</script><script id="" text="" charset="" type="text/javascript" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/spm.v1.min.js.descarga"></script><script type="text/javascript" id="" charset="">document.querySelectorAll('a[rel*\x3d"noreferrer"][href*\x3d"technologyadvice.com"]').forEach(function(a){var b=a.rel.split(" ");b.splice(b.indexOf("noreferrer"),1);a.rel=b.join(" ")});document.querySelectorAll('a[href*\x3d"technologyadvice.com"]').forEach(function(a){a.referrerPolicy="no-referrer-when-downgrade"});</script><script type="text/javascript" id="" charset="">(function(b,a,c){_ml=b._ml||{};_ml.eid="50027";b=a.getElementsByTagName(c)[0];var d=new Date;a=a.createElement(c);a.async=1;a.src="https://ml314.com/tag.aspx?"+d.getDate()+d.getMonth();b.parentNode.insertBefore(a,b)})(window,document,"script");</script>
+<script type="text/javascript" id="" charset="">Sailthru.init({customerId:"c111b46e82c7b26105b18e294b06bc60"});</script><img src="./7 Awesome Libraries for Java Unit and Integration Testing_files/saved_resource" height="1" width="1" style="border-style: none; display: none;"><iframe style="width: 0px !important; height: 0px !important; display: none !important;" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/saved_resource.html"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/saved_resource(1).html"></iframe><div id="batBeacon547314402068" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img id="batBeacon728649442025" width="0" height="0" alt="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/0" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img id="batBeacon593189869828" width="0" height="0" alt="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/0(1)" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div><script type="text/javascript" async="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/zi-tag.js.descarga"></script><script type="text/javascript" id="" charset="">var om56eecfe19c9dc,om56eecfe19c9dc_poll=function(){var b=0;return function(d,c){clearInterval(b);b=setInterval(d,c)}}();
+!function(b,d,c){if(b.getElementById(c))om56eecfe19c9dc_poll(function(){if(window.om_loaded&&!om56eecfe19c9dc)return om56eecfe19c9dc=new OptinMonsterApp,om56eecfe19c9dc.init({s:"16961.56eecfe19c9dc",staging:0,dev:0,beta:0})},25);else{var e=!1,a=b.createElement(d);a.id=c;a.src="//a.optnmstr.com/app/js/api.min.js";a.async=!0;a.onload=a.onreadystatechange=function(){if(!(e||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState))try{e=om_loaded=!0,om56eecfe19c9dc=new OptinMonsterApp,
+om56eecfe19c9dc.init({s:"16961.56eecfe19c9dc",staging:0,dev:0,beta:0}),a.onload=a.onreadystatechange=null}catch(f){}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(a)}}(document,"script","omapi-script");</script>
+
+<script type="text/javascript" id="" charset="">document.querySelectorAll('a[rel*\x3d"noreferrer"][href*\x3d"technologyadvice.com"]').forEach(function(a){var b=a.rel.split(" ");b.splice(b.indexOf("noreferrer"),1);a.rel=b.join(" ")});document.querySelectorAll('a[href*\x3d"technologyadvice.com"]').forEach(function(a){a.referrerPolicy="no-referrer-when-downgrade"});</script><script type="text/javascript" id="" charset="">!function(){try{window.setTimeout(function(){function a(){c||(c=!0,dataLayer.push({event:"userInteraction"}),d.forEach(function(b){window.removeEventListener(b,a,{once:!0,passive:!0})}))}var d=["mouseover","keydown","touchmove","touchstart","scroll"];d.forEach(function(b){window.addEventListener(b,a,{once:!0,passive:!0})});var c=!1},1E3)}catch(a){}}();</script><div id="om-xdcfjvbcsqclmtcbwfhg-holder"></div><iframe src="./7 Awesome Libraries for Java Unit and Integration Testing_files/aframe.html" width="0" height="0" style="display: none;"></iframe><script type="text/javascript" charset="utf-8" defer="" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/zischedule.js.descarga"></script><script type="text/javascript" charset="utf-8" async="" src="blob:https://dzone.com/6294e529-d230-43ec-a137-fde9f95baf81"></script><iframe id="universal_pixel_5fjyxkv" height="0" width="0" style="display:none;" src="./7 Awesome Libraries for Java Unit and Integration Testing_files/cei.html" title="TTD Universal Pixel"></iframe></body></html>
