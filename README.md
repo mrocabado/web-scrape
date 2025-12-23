@@ -4,8 +4,9 @@
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/usuario/proyecto)
 [![Coverage](https://img.shields.io/badge/coverage-85%25-green)](https://github.com/usuario/proyecto)
 
-This repository contains utilities and tools for web scraping various websites to extract useful data. The scripts are
-written in Java and utilize libraries such as Jsoup, Flexmark and Playwright for efficient web scraping.
+
+Este repositorio contiene utilidades y herramientas para extraer datos útiles de diversos sitios web. Los scripts están 
+ escritos en Java y utilizan bibliotecas como Jsoup, Flexmark y Playwright para un web scraping eficiente.
 
 ## 📋 Tabla de Contenidos
 
