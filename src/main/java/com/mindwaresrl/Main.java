@@ -47,21 +47,21 @@ public class Main {
         System.out.println("Getting title with Playwright");
 
         try(var pw = Playwright.create(); var browser =  pw.chromium().launch(new BrowserType.LaunchOptions().setChannel("chromium"))) {
-            var page = browser.newPage();
+            var context = browser.newContext();
+            var page = context.newPage();
             page.navigate("https://playwright.dev/java/");
             String title = page.title();
             System.out.println("Page Title: " + title);
-        }
+    }
 
         System.out.println("Getting title with Playwright");
 
         try(var pw = Playwright.create(); var browser =  pw.chromium().launch(new BrowserType.LaunchOptions().setChannel("chromium"))) {
-            var page = browser.newPage();
+            var context = browser.newContext();
+            var page = context.newPage();
             page.navigate("http://127.0.0.1:8000/7%20Awesome%20Libraries%20for%20Java%20Unit%20and%20Integration%20Testing.html");
             String title = page.title();
             System.out.println("Page Title: " + title);
         }
      }
-
-
 }
