@@ -109,7 +109,6 @@ jwebserver -d src/test/resources/webpage -p 8080
 ### Pruebas
 
 - JUnit 5
-- Mockito
 - AssertJ
 
 ### Estándares de Código
