@@ -21,28 +21,51 @@ public class ScrapingDinamico {
             Page page = context.newPage();
 
             // 3. Navegación con tiempo de espera extendido
-            System.out.println("Navegando a Airbnb...");
-            page.navigate("https://www.airbnb.com", new Page.NavigateOptions().setTimeout(60000));
-            
-            // Esperamos a que cargue el contenido básico
-            page.waitForLoadState(LoadState.DOMCONTENTLOADED);
-
-            // 4. Intento de click usando un selector de TEXTO (más estable que los IDs de test)
-            // En lugar de 'structured-search...', buscamos el texto que ve el usuario
             try {
-                System.out.println("Buscando el botón de búsqueda...");
-                // Esperamos máximo 10 segundos por el botón
-                page.waitForSelector("text='En cualquier lugar'", new Page.WaitForSelectorOptions().setTimeout(10000));
-                page.click("text='En cualquier lugar'");
+                System.out.println("Navegando a Airbnb...");
+                page.navigate("https://www.airbnb.com", new Page.NavigateOptions().setTimeout(60000));
                 
-                // 5. Rellenar el destino
-                page.fill("input[placeholder='Donde']", "Cochabamba, Bolivia");
+                // Esperamos a que cargue el contenido básico
+                page.waitForLoadState(LoadState.DOMCONTENTLOADED);
+
+                // --- NUEVA ESTRATEGIA: CERRAR MODALES PRIMERO ---
+                try {
+                    // Intenta cerrar el modal de cookies/info si aparece "Entendido"
+                     if (page.isVisible("button:has-text('Entendido')")) {
+                         page.click("button:has-text('Entendido')");
+                         System.out.println("Modal cerrado.");
+                     }
+                } catch (Exception e) {
+                    
+                }
+                String inputSelector = "input[data-testid='structured-search-input-field-query']";
                 
-                System.out.println("¡Interacción lograda!");
+                // Si no encontramos ese ID específico, intentamos con el ID alternativo que suele usar Airbnb
+                if (!page.isVisible(inputSelector)) {
+                     inputSelector = "#bigsearch-query-location-input";
+                }
+
+                // A veces hay que hacer click en el botón de "En cualquier lugar" si el search está colapsado
+                if (!page.isVisible(inputSelector)) {
+                    System.out.println("Buscando botón para expandir búsqueda...");
+                    page.click("button:has-text('En cualquier lugar')");
+                }
+
+                System.out.println("Escribiendo destino en selector: " + inputSelector);
+                page.waitForSelector(inputSelector);
+                page.click(inputSelector); // Click para enfocar
+                page.fill(inputSelector, "Cochabamba, Bolivia");
+                
+                // Presionar ENTER para buscar (más fiable que buscar el botón de lupa)
+                page.keyboard().press("Enter");
+                
+                System.out.println("¡Búsqueda enviada!");
+                page.waitForTimeout(3000); // Esperar un poco para la foto
                 page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("exito_airbnb.png")));
                 
             } catch (Exception e) {
-                System.err.println("No se encontró el botón. Posible bloqueo o cambio de diseño.");
+                System.err.println("Error durante la automatización: " + e.getMessage());
+                e.printStackTrace();
                 page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("error_captura.png")));
             }
 
