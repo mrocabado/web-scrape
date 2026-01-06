@@ -84,7 +84,7 @@ Las páginas web de prueba deben estar en `test\resources\webpages` y para acced
 
 
 ```bash
-jwebserver -d src/test/resources/webpage -p 8080
+jwebserver -d D:\dev\workspace-agents\web-search\src\test\resources\webpage -p 8080
 ```
 
 ## 🛠️ Tecnologías

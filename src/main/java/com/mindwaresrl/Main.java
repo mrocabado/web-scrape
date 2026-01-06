@@ -59,7 +59,7 @@ public class Main {
         try(var pw = Playwright.create(); var browser =  pw.chromium().launch(new BrowserType.LaunchOptions().setChannel("chromium"))) {
             var context = browser.newContext();
             var page = context.newPage();
-            page.navigate("http://127.0.0.1:8000/7%20Awesome%20Libraries%20for%20Java%20Unit%20and%20Integration%20Testing.html");
+            page.navigate("http://127.0.0.1:8080/Casa%20de%20Campo_%20Cochabamba%20site_tripadvisor.com%20%E2%80%94%20Yandex_%20found%202%20thousand%20results.html");
             String title = page.title();
             System.out.println("Page Title: " + title);
         }
