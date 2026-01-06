@@ -117,3 +117,7 @@ test-output/
 surefire-reports/
 jacoco.exec
 coverage/
+
+# ------------------------
+.env
+browsers/

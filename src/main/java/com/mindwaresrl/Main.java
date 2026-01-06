@@ -6,6 +6,8 @@ import com.vladsch.flexmark.html2md.converter.FlexmarkHtmlConverter;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.safety.Safelist;
+import com.microsoft.playwright.options.WaitUntilState;
+import com.microsoft.playwright.Page;
 
 public class Main {
 
@@ -56,12 +58,32 @@ public class Main {
 
         System.out.println("Getting title with Playwright");
 
-        try(var pw = Playwright.create(); var browser =  pw.chromium().launch(new BrowserType.LaunchOptions().setChannel("chromium"))) {
+        try(var pw = Playwright.create(); var browser = pw.chromium().launch(
+                new BrowserType.LaunchOptions().setHeadless(true)
+        );
+        ) {
             var context = browser.newContext();
             var page = context.newPage();
-            page.navigate("http://127.0.0.1:8000/7%20Awesome%20Libraries%20for%20Java%20Unit%20and%20Integration%20Testing.html");
+            page.navigate("https://es.wikipedia.org/wiki/Bolivia",
+                    //"http://127.0.0.1:8080/7%20Awesome%20Libraries%20for%20Java%20Unit%20and%20Integration%20Testing.html",
+                    new Page.NavigateOptions().setWaitUntil(WaitUntilState.DOMCONTENTLOADED));
             String title = page.title();
             System.out.println("Page Title: " + title);
+
+            String fullHtml = page.content();
+            String markDown = convertHtmlToMarkdown(fullHtml);
+
+            System.out.println("=== MARKDOWN OUTPUT ===");
+            System.out.println(markDown);
+
         }
      }
+
+    private static String convertHtmlToMarkdown(String ranHtml){
+        String cleanHtml = Jsoup.clean(ranHtml,Safelist.relaxed());
+        FlexmarkHtmlConverter converter = FlexmarkHtmlConverter.builder().build();
+        return converter.convert(cleanHtml);
+    }
+
 }
+
