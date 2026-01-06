@@ -60,7 +60,7 @@ public class Main {
 
         try(var pw = Playwright.create(); var browser = pw.chromium().launch(
                 new BrowserType.LaunchOptions().setHeadless(true)
-        );
+        )
         ) {
             var context = browser.newContext();
             var page = context.newPage();

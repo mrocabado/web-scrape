@@ -121,3 +121,6 @@ coverage/
 # ------------------------
 .env
 browsers/
+trace.zip
+debug_screen.png
+debug_source.html
