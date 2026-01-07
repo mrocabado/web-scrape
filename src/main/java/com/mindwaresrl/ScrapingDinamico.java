@@ -10,7 +10,7 @@ public class ScrapingDinamico {
         try (Playwright pw = Playwright.create()) {
             // 1. Lanzamos con argumentos para evitar detección
             Browser browser = pw.chromium().launch(new BrowserType.LaunchOptions()
-                .setHeadless(false)
+                .setHeadless(false) // false = ver el navegador, true = oculto (produccion)
                 .setSlowMo(100)); // Hace que cada acción tarde 100ms (más humano)
 
             // 2. Definimos un contexto con resolución de pantalla común
