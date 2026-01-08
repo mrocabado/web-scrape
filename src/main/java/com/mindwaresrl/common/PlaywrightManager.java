@@ -24,7 +24,7 @@ public class PlaywrightManager {
         return browser;
     }
 
-    private static synchronized void closeAll() {
+    public static synchronized void closeAll() {
         System.out.println("Closing Playwright and browser...");
 
         try {
