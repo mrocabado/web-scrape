@@ -18,6 +18,8 @@
         <jsoup.version>1.21.2</jsoup.version>
         <flexmark.version>0.64.8</flexmark.version>
         <playwright.version>1.57.0</playwright.version>
+        <lombok.version>1.18.42</lombok.version>
+        <log4j2.version>2.25.3</log4j2.version>        
         <junit.version>5.14.1</junit.version>
         <assertj.version>3.27.6</assertj.version>
     </properties>
@@ -55,6 +57,23 @@
             <version>${playwright.version}</version>
         </dependency>
 
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-layout-template-json</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>        
+
         <!-- Test Dependencies -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -79,6 +98,7 @@
                 <configuration>
                     <source>21</source>
                     <target>21</target>
+<!--                    <compilerArgs>&#45;&#45;enable-preview</compilerArgs>-->                    
                 </configuration>
             </plugin>
             <!-- UNIT TESTS -->
