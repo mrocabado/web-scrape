@@ -17,7 +17,6 @@ public class DynamicWebScrape implements WebScrape {
     public WebScrapeResult execute(WebScrapeRequest webScrapeRequest) throws IOException {
         Browser browser = PlaywrightManager.browser();
 
-        // Crear el contexto (aislamiento total)
         try (BrowserContext context = browser.newContext()) {
             Page page = context.newPage();
             page.navigate(String.valueOf(webScrapeRequest.url()));
