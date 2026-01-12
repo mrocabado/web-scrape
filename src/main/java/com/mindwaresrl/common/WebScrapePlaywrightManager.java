@@ -4,7 +4,7 @@ import com.microsoft.playwright.*;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class PlaywrightManager {
+public class WebScrapePlaywrightManager {
     private static Playwright playwright;
     private static Browser browser;
 
@@ -13,7 +13,7 @@ public class PlaywrightManager {
             playwright = Playwright.create();
             browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chromium"));
             // El Shutdown Hook también iría aquí
-            Runtime.getRuntime().addShutdownHook(new Thread(PlaywrightManager::closeAll));
+            Runtime.getRuntime().addShutdownHook(new Thread(WebScrapePlaywrightManager::closeAll));
             System.out.println("Playwright process and browser started...");
         } catch (Exception e) {
             throw new ExceptionInInitializerError("Error starting up Playwright: " + e.getMessage());

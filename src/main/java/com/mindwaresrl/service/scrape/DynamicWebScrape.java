@@ -5,7 +5,7 @@ import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitUntilState;
 import com.mindwaresrl.common.Conversion;
-import com.mindwaresrl.common.PlaywrightManager;
+import com.mindwaresrl.common.WebScrapePlaywrightManager;
 import com.mindwaresrl.model.WebScrapeRequest;
 import com.mindwaresrl.model.WebScrapeResult;
 
@@ -15,7 +15,7 @@ public class DynamicWebScrape implements WebScrape {
 
     @Override
     public WebScrapeResult execute(WebScrapeRequest webScrapeRequest) throws IOException {
-        Browser browser = PlaywrightManager.browser();
+        Browser browser = WebScrapePlaywrightManager.browser();
 
         try (BrowserContext context = browser.newContext()) {
             Page page = context.newPage();

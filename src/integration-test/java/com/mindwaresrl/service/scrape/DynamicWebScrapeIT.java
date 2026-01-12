@@ -1,6 +1,6 @@
 package com.mindwaresrl.service.scrape;
 
-import com.mindwaresrl.common.PlaywrightManager;
+import com.mindwaresrl.common.WebScrapePlaywrightManager;
 import com.mindwaresrl.model.WebScrapeRequest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -17,12 +17,12 @@ public class DynamicWebScrapeIT {
 
     @BeforeAll
     public static void setUp() throws IOException {
-        PlaywrightManager.browser();
+        WebScrapePlaywrightManager.browser();
     }
 
     @AfterAll
     public static void tearDown() {
-        PlaywrightManager.closeAll();
+        WebScrapePlaywrightManager.closeAll();
     }
 
     @Test
