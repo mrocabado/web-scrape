@@ -19,12 +19,12 @@ public class DynamicWebScrape implements WebScrape {
 
         try (BrowserContext context = browser.newContext()) {
             Page page = context.newPage();
-            page.navigate(String.valueOf(webScrapeRequest.url()));
 
             page.navigate(String.valueOf(webScrapeRequest.url()),
                     new Page.NavigateOptions()
                     .setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
                     .setTimeout(webScrapeRequest.timeout().toMillis()));
+
             String htmlContent = page.content();
 
             return Conversion.toWebScrapeResult(htmlContent);
