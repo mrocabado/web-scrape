@@ -14,9 +14,9 @@ public class WebScrapePlaywrightManager {
             browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chromium"));
             // El Shutdown Hook también iría aquí
             Runtime.getRuntime().addShutdownHook(new Thread(WebScrapePlaywrightManager::closeAll));
-            System.out.println("Playwright process and browser started...");
+            System.out.println("WebScrape Playwright process and browser started...");
         } catch (Exception e) {
-            throw new ExceptionInInitializerError("Error starting up Playwright: " + e.getMessage());
+            throw new ExceptionInInitializerError("Error starting up WebScrape Playwright: " + e.getMessage());
         }
     }
 
@@ -25,19 +25,19 @@ public class WebScrapePlaywrightManager {
     }
 
     public static synchronized void closeAll() {
-        System.out.println("Closing Playwright and browser...");
+        System.out.println("Closing WebScrape Playwright and browser...");
 
         try {
             if (browser != null) {
                 // Intentamos cerrar, pero ignoramos si el pipe ya se cerró
                 browser.close();
-                log.info("Browser closed");
+                log.info("WebScrape Browser closed");
             }
         } catch (PlaywrightException e) {
             if (e.getMessage().contains("pipe closed") || e.getMessage().contains("Target closed")) {
-                log.warn("Browser closed by the OS (Pipe closed)");
+                log.warn("WebScrape Browser closed by the OS (Pipe closed)");
             } else {
-                log.error("Unexpected error when closing the Browser", e);
+                log.error("Unexpected error when closing the WebScrape Browser", e);
             }
         } finally {
             browser = null;
@@ -46,11 +46,11 @@ public class WebScrapePlaywrightManager {
         try {
             if (playwright != null) {
                 playwright.close();
-                log.info("Playwright instance released.");
+                log.info("WebScrape Playwright instance released.");
             }
         } catch (Exception e) {
             // En un shutdown hook, ser permisivo es mejor que lanzar excepciones
-            log.warn("Nota: Playwright instance could not be released (may be already closed).");
+            log.warn("Nota: WebScrape Playwright instance could not be released (may be already closed).");
         } finally {
             playwright = null;
         }
