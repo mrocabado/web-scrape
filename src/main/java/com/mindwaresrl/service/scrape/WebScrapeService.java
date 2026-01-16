@@ -3,6 +3,8 @@ package com.mindwaresrl.service.scrape;
 import com.mindwaresrl.common.DomRendering;
 import com.mindwaresrl.model.WebScrapeRequest;
 import com.mindwaresrl.model.WebScrapeResult;
+import com.mindwaresrl.service.scrape.strategy.DynamicWebScrape;
+import com.mindwaresrl.service.scrape.strategy.StaticWebScrape;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;

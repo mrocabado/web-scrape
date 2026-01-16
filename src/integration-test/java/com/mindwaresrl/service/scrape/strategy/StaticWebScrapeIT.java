@@ -1,4 +1,4 @@
-package com.mindwaresrl.service.scrape;
+package com.mindwaresrl.service.scrape.strategy;
 
 import com.mindwaresrl.model.WebScrapeRequest;
 import org.junit.jupiter.api.Test;

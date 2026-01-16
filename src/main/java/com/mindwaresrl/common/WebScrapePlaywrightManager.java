@@ -3,6 +3,8 @@ package com.mindwaresrl.common;
 import com.microsoft.playwright.*;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.List;
+
 @Slf4j
 public class WebScrapePlaywrightManager {
     private static Playwright playwright;
@@ -11,7 +13,18 @@ public class WebScrapePlaywrightManager {
     static {
         try {
             playwright = Playwright.create();
-            browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chromium"));
+            browser = playwright.chromium()
+                    .launch(new BrowserType.LaunchOptions()
+                                    .setChannel("chromium")
+//                        .setHeadless(false) //May enable these when developing to see the browser
+//                        .setSlowMo(100)
+//                        .setHeadless(true)
+                                    .setArgs(List.of(
+                                            "--disable-blink-features=AutomationControlled", // Ayuda a evadir detección
+                                            "--start-maximized"
+                                    ))
+
+                    );
             // El Shutdown Hook también iría aquí
             Runtime.getRuntime().addShutdownHook(new Thread(WebScrapePlaywrightManager::closeAll));
             System.out.println("WebScrape Playwright process and browser started...");

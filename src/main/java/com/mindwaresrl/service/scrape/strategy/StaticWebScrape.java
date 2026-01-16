@@ -1,9 +1,10 @@
-package com.mindwaresrl.service.scrape;
+package com.mindwaresrl.service.scrape.strategy;
 
 import com.mindwaresrl.common.Conversion;
 import com.mindwaresrl.common.FakeUserAgent;
 import com.mindwaresrl.model.WebScrapeRequest;
 import com.mindwaresrl.model.WebScrapeResult;
+import com.mindwaresrl.service.scrape.WebScrape;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 
