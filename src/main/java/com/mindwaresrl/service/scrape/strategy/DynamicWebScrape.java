@@ -21,12 +21,12 @@ public class DynamicWebScrape implements WebScrape {
         Browser browser = WebScrapePlaywrightManager.browser();
 
         //TODO we need a way to update user agent
-        UserAgentStrategy uaStrategy = user_agent_update.getStrategy(webScrapeRequest);
-        String currentUserAgent = uaStrategy.getUserAgent();
+        //UserAgentStrategy uaStrategy = user_agent_update.getStrategy(webScrapeRequest);
+        //String currentUserAgent = uaStrategy.getUserAgent();
         try (BrowserContext context = browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(1920, 1080)
                 //.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
-                .setUserAgent(currentUserAgent)
+          //      .setUserAgent(currentUserAgent)
         )) {
             Page page = context.newPage();
 
