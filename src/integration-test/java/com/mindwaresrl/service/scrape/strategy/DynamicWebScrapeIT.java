@@ -26,17 +26,37 @@ public class DynamicWebScrapeIT {
     }
 
     @Test
-    void givenScrapeRequest_whenDynamicWebScrapeExecutes_thenResultIsReturned() throws InterruptedException, IOException {
-        //GIVEN
-//        var webSearchRequest = new WebScrapeRequest(URI.create("https://www.facebook.com/CBAFanPage/posts/felicidades-a-los-lectores-cbabiblioteca/1906082259562953/").toURL(), Duration.of(1L, ChronoUnit.MINUTES) );
-        var webSearchRequest = new WebScrapeRequest(URI.create("https://www.instagram.com/reel/DLK5bawslkA/").toURL(), Duration.of(1L, ChronoUnit.MINUTES) );
+    void givenFacebookScrapeRequest_whenDynamicWebScrapeExecutes_thenResultIsReturned()
+            throws InterruptedException, IOException {
+        // GIVEN
+        var webSearchRequest = new WebScrapeRequest(URI.create(
+                "https://www.facebook.com/CBAFanPage/posts/felicidades-a-los-lectores-cbabiblioteca/1906082259562953/")
+                .toURL(),
+                Duration.of(1L, ChronoUnit.MINUTES));
 
-
-        //WHEN
+        // WHEN
         var webSearch = new DynamicWebScrape();
         var webSearchResult = webSearch.execute(webSearchRequest);
 
-        //THEN
+        // THEN
+        assertThat(webSearchResult).isNotNull();
+        assertThat(webSearchResult.markdown()).isNotNull();
+
+        System.out.println(webSearchResult.markdown());
+    }
+
+    @Test
+    void givenInstagramScrapeRequest_whenDynamicWebScrapeExecutes_thenResultIsReturned()
+            throws InterruptedException, IOException {
+        // GIVEN
+        var webSearchRequest = new WebScrapeRequest(URI.create("https://www.instagram.com/reel/DLK5bawslkA/").toURL(),
+                Duration.of(1L, ChronoUnit.MINUTES));
+
+        // WHEN
+        var webSearch = new DynamicWebScrape();
+        var webSearchResult = webSearch.execute(webSearchRequest);
+
+        // THEN
         assertThat(webSearchResult).isNotNull();
         assertThat(webSearchResult.markdown()).isNotNull();
 
