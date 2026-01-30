@@ -25,8 +25,12 @@ public class AgentDinamicWeb {
      * Returns the next User Agent in the list (Round Robin strategy).
      * This ensures deterministic rotation and equal distribution.
      */
-    public static String getNextAgent()  {
+    public static String getNextAgent() {
         int index = counter.getAndIncrement() % USER_AGENTS.size();
         return USER_AGENTS.get(index);
+    }
+
+    public static int getTotalAgents() {
+        return USER_AGENTS.size();
     }
 }

@@ -10,29 +10,41 @@ import com.mindwaresrl.common.WebScrapePlaywrightManager;
 import com.mindwaresrl.model.WebScrapeRequest;
 import com.mindwaresrl.model.WebScrapeResult;
 import com.mindwaresrl.service.scrape.WebScrape;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 
+@Slf4j
 public class DynamicWebScrape implements WebScrape {
 
     @Override
     public WebScrapeResult execute(WebScrapeRequest webScrapeRequest) throws IOException {
         Browser browser = WebScrapePlaywrightManager.browser();
+        int maxRetries = AgentDinamicWeb.getTotalAgents();
+        Exception lastException = null;
 
-        // TODO we need a way to update user agent
-        try (BrowserContext context = browser.newContext(new Browser.NewContextOptions()
-                .setViewportSize(1920, 1080)
-                .setUserAgent(AgentDinamicWeb.getNextAgent()))) {
-            Page page = context.newPage();
+        for (int i = 0; i < maxRetries; i++) {
+            String currentUserAgent = AgentDinamicWeb.getNextAgent();
+            try (BrowserContext context = browser.newContext(new Browser.NewContextOptions()
+                    .setViewportSize(1920, 1080)
+                    .setUserAgent(currentUserAgent))) {
 
-            page.navigate(String.valueOf(webScrapeRequest.url()),
-                    new Page.NavigateOptions()
-                            .setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
-                            .setTimeout(webScrapeRequest.timeout().toMillis()));
+                Page page = context.newPage();
+                page.navigate(String.valueOf(webScrapeRequest.url()),
+                        new Page.NavigateOptions()
+                                .setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
+                                .setTimeout(webScrapeRequest.timeout().toMillis()));
 
-            String htmlContent = page.content();
-
-            return Conversion.toWebScrapeResult(htmlContent);
+                String htmlContent = page.content();
+                return Conversion.toWebScrapeResult(htmlContent);
+            } catch (Exception e) {
+                log.warn("Attempt {}/{} failed with User Agent: {}. Error: {}", i + 1, maxRetries, currentUserAgent,
+                        e.getMessage());
+                lastException = e;
+            }
         }
+
+        throw new IOException("Failed to scrape after " + maxRetries + " attempts. Last error: "
+                + (lastException != null ? lastException.getMessage() : "Unknown"), lastException);
     }
 }
