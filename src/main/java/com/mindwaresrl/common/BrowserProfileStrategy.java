@@ -1,9 +1,9 @@
 package com.mindwaresrl.common;
 
 import com.mindwaresrl.model.BrowserProfile;
-import com.mindwaresrl.model.PorfileContext;
+import com.mindwaresrl.model.ProfileContext;
 
 
 public interface BrowserProfileStrategy {
-    BrowserProfile getprofile(PorfileContext context);
+    BrowserProfile getProfile(ProfileContext context);
 }

@@ -6,7 +6,6 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitUntilState;
 import com.mindwaresrl.common.Conversion;
 import com.mindwaresrl.common.WebScrapePlaywrightManager;
-import com.mindwaresrl.common.UserAgentStrategy;
 import com.mindwaresrl.common.user_agent_update;
 import com.mindwaresrl.model.WebScrapeRequest;
 import com.mindwaresrl.model.WebScrapeResult;
