@@ -51,7 +51,7 @@ public class BrowserProfileFactory {
         return switch (ctx.mode()){
             case MOBILE ->  new MobileProfileStrategy();
             case DESKTOP -> new DesktopProfileStrategy();
-            case AUTO -> new DesktopProfileStrategy();
+            case AUTO -> new DesktopFallbackProfileStrategy() ;
         };
     }
 }
