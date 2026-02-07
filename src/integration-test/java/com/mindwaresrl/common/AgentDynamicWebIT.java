@@ -7,17 +7,17 @@ import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class AgentDinamicWebIT {
+public class AgentDynamicWebIT {
 
     @Test
     void givenRoundRobinStrategy_whenGetNextAgentIsCalled_thenAgentsRotateCorrectly() {
-        int totalAgents = AgentDinamicWeb.getTotalAgents();
+        int totalAgents = AgentDynamicWeb.getTotalAgents();
         Set<String> uniqueAgents = new HashSet<>();
         String firstAgent = null;
 
         // 1. Consume all unique agents in one cycle
         for (int i = 0; i < totalAgents; i++) {
-            String currentAgent = AgentDinamicWeb.getNextAgent();
+            String currentAgent = AgentDynamicWeb.getNextAgent();
             uniqueAgents.add(currentAgent);
 
             if (i == 0) {
@@ -29,13 +29,13 @@ public class AgentDinamicWebIT {
         assertThat(uniqueAgents).hasSize(totalAgents);
 
         // 2. Verify the cycle loops back to the start
-        String nextAgentAfterCycle = AgentDinamicWeb.getNextAgent();
+        String nextAgentAfterCycle = AgentDynamicWeb.getNextAgent();
         assertThat(nextAgentAfterCycle).isEqualTo(firstAgent);
     }
 
     @Test
     void whenCreateProfileIsCalled_thenReturnsValidBrowserContextOptions() {
-        var profile = AgentDinamicWeb.createProfile();
+        var profile = AgentDynamicWeb.createProfile();
 
         assertThat(profile).isNotNull();
         assertThat(profile.userAgent).isNotNull();
@@ -45,10 +45,10 @@ public class AgentDinamicWebIT {
 
     @Test
     void whenGetAllAgents_thenTheyShouldBeChromiumBased() {
-        int totalAgents = AgentDinamicWeb.getTotalAgents();
+        int totalAgents = AgentDynamicWeb.getTotalAgents();
 
         for (int i = 0; i < totalAgents; i++) {
-            String agent = AgentDinamicWeb.getNextAgent();
+            String agent = AgentDynamicWeb.getNextAgent();
 
             // Verify it's NOT Firefox
             assertThat(agent).doesNotContain("Firefox");
@@ -63,6 +63,6 @@ public class AgentDinamicWebIT {
     @Test
     void whenGetTotalAgentsIsCalled_thenReturnsPositiveNumber() {
         // This confirms either API loaded or Fallback list was used
-        assertThat(AgentDinamicWeb.getTotalAgents()).isGreaterThan(0);
+        assertThat(AgentDynamicWeb.getTotalAgents()).isGreaterThan(0);
     }
 }

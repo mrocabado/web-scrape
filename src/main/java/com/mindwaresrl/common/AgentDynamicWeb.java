@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class AgentDinamicWeb {
+public class AgentDynamicWeb {
 
     // Fallback list (Smart Chrome strategy)
     private static final List<String> FALLBACK_AGENTS = Arrays.asList(

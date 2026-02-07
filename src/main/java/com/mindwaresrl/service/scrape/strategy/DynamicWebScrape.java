@@ -4,7 +4,7 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitUntilState;
-import com.mindwaresrl.common.AgentDinamicWeb;
+import com.mindwaresrl.common.AgentDynamicWeb;
 import com.mindwaresrl.common.Conversion;
 import com.mindwaresrl.common.WebScrapePlaywrightManager;
 import com.mindwaresrl.model.WebScrapeRequest;
@@ -22,7 +22,7 @@ public class DynamicWebScrape implements WebScrape {
         Browser browser = WebScrapePlaywrightManager.browser();
 
         // Single Optimized Attempt with Smart Profile (User-Agent + Locale + Timezone)
-        try (BrowserContext context = browser.newContext(AgentDinamicWeb.createProfile())) {
+        try (BrowserContext context = browser.newContext(AgentDynamicWeb.createProfile())) {
 
             Page page = context.newPage();
             page.navigate(String.valueOf(webScrapeRequest.url()),
