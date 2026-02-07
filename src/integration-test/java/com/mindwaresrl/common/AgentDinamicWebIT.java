@@ -34,7 +34,35 @@ public class AgentDinamicWebIT {
     }
 
     @Test
+    void whenCreateProfileIsCalled_thenReturnsValidBrowserContextOptions() {
+        var profile = AgentDinamicWeb.createProfile();
+
+        assertThat(profile).isNotNull();
+        assertThat(profile.userAgent).isNotNull();
+        assertThat(profile.locale).isEqualTo("es-419");
+        assertThat(profile.timezoneId).isEqualTo("America/La_Paz");
+    }
+
+    @Test
+    void whenGetAllAgents_thenTheyShouldBeChromiumBased() {
+        int totalAgents = AgentDinamicWeb.getTotalAgents();
+
+        for (int i = 0; i < totalAgents; i++) {
+            String agent = AgentDinamicWeb.getNextAgent();
+
+            // Verify it's NOT Firefox
+            assertThat(agent).doesNotContain("Firefox");
+
+            // Verify it's either Chrome or Edge (contains 'Chrome' or 'Edg')
+            assertThat(agent).satisfiesAnyOf(
+                    ua -> assertThat(ua).contains("Chrome"),
+                    ua -> assertThat(ua).contains("Edg"));
+        }
+    }
+
+    @Test
     void whenGetTotalAgentsIsCalled_thenReturnsPositiveNumber() {
+        // This confirms either API loaded or Fallback list was used
         assertThat(AgentDinamicWeb.getTotalAgents()).isGreaterThan(0);
     }
 }

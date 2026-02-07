@@ -20,31 +20,21 @@ public class DynamicWebScrape implements WebScrape {
     @Override
     public WebScrapeResult execute(WebScrapeRequest webScrapeRequest) throws IOException {
         Browser browser = WebScrapePlaywrightManager.browser();
-        int maxRetries = AgentDinamicWeb.getTotalAgents();
-        Exception lastException = null;
 
-        for (int i = 0; i < maxRetries; i++) {
-            String currentUserAgent = AgentDinamicWeb.getNextAgent();
-            try (BrowserContext context = browser.newContext(new Browser.NewContextOptions()
-                    .setViewportSize(1920, 1080)
-                    .setUserAgent(currentUserAgent))) {
+        // Single Optimized Attempt with Smart Profile (User-Agent + Locale + Timezone)
+        try (BrowserContext context = browser.newContext(AgentDinamicWeb.createProfile())) {
 
-                Page page = context.newPage();
-                page.navigate(String.valueOf(webScrapeRequest.url()),
-                        new Page.NavigateOptions()
-                                .setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
-                                .setTimeout(webScrapeRequest.timeout().toMillis()));
+            Page page = context.newPage();
+            page.navigate(String.valueOf(webScrapeRequest.url()),
+                    new Page.NavigateOptions()
+                            .setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
+                            .setTimeout(webScrapeRequest.timeout().toMillis()));
 
-                String htmlContent = page.content();
-                return Conversion.toWebScrapeResult(htmlContent);
-            } catch (Exception e) {
-                log.warn("Attempt {}/{} failed with User Agent: {}. Error: {}", i + 1, maxRetries, currentUserAgent,
-                        e.getMessage());
-                lastException = e;
-            }
+            String htmlContent = page.content();
+            return Conversion.toWebScrapeResult(htmlContent);
+        } catch (Exception e) {
+            log.error("Optimized scraping attempt failed for URL: {}", webScrapeRequest.url(), e);
+            throw new IOException("Failed to scrape URL: " + webScrapeRequest.url(), e);
         }
-
-        throw new IOException("Failed to scrape after " + maxRetries + " attempts. Last error: "
-                + (lastException != null ? lastException.getMessage() : "Unknown"), lastException);
     }
 }
