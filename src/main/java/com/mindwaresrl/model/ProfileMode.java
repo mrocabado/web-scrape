@@ -1,6 +1,6 @@
 package com.mindwaresrl.model;
 
-public enum ProfileMode{
+public enum ProfileMode {
     DESKTOP,
     MOBILE,
     AUTO

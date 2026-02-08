@@ -6,8 +6,5 @@ public record BrowserProfile(
         int height,
         String locale,
         String timezone
-) {
+) {}
 
-
-
-}
