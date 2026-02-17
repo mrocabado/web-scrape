@@ -15,14 +15,13 @@ public class WebScrapePlaywrightManager {
             playwright = Playwright.create();
             browser = playwright.chromium()
                     .launch(new BrowserType.LaunchOptions()
-                                    .setChannel("chromium")
-//                        .setHeadless(false) //May enable these when developing to see the browser
-//                        .setSlowMo(100)
-//                        .setHeadless(true)
-                                    .setArgs(List.of(
-                                            "--disable-blink-features=AutomationControlled", // Ayuda a evadir detección
-                                            "--start-maximized"
-                                    ))
+                            .setChannel("chromium")
+                            .setHeadless(false) // May enable these when developing to see the browser
+                            .setSlowMo(100)
+
+                            .setArgs(List.of(
+                                    "--disable-blink-features=AutomationControlled", // Ayuda a evadir detección
+                                    "--start-maximized"))
 
                     );
             // El Shutdown Hook también iría aquí
