@@ -30,7 +30,7 @@ class DynamicWebFacebookScrapeIT {
     void givenFacebookScrapeRequest_whenDynamicWebScrapeExecutes_thenResultIsReturned()
             throws InterruptedException, IOException {
         // Facebook post URL for testing
-        String testUrl = "https://www.facebook.com/CBAFanPage/posts/felicidades-a-los-lectores-cbabiblioteca/1906082259562953/";
+        String testUrl = "https://m.facebook.com/CBAFanPage/posts/felicidades-a-los-lectores-cbabiblioteca/1906082259562953/";
 
         var webSearchRequest = new WebScrapeRequest(
                 URI.create(testUrl).toURL(),
