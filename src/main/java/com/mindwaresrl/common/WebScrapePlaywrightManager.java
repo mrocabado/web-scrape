@@ -15,7 +15,7 @@ public class WebScrapePlaywrightManager {
             playwright = Playwright.create();
             browser = playwright.chromium()
                     .launch(new BrowserType.LaunchOptions()
-                            .setChannel("chromium")
+                            .setChannel("chrome")
                             .setHeadless(false) // May enable these when developing to see the browser
                             .setSlowMo(100)
 
