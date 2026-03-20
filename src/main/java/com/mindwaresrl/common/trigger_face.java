@@ -24,7 +24,7 @@ public class trigger_face {
         removeDialogs(page);
 
         if (url.contains("/posts/")) {
-            new Post_facebook(page);
+            new Post_facebook(page,url);
         }
     }
 
