@@ -98,57 +98,178 @@ public class Photo_Facebook {
         }
     }
 
+
     private void extractComments(Page page) {
-        System.out.println("\n=== COMENTARIOS ===");
+        log.info("=== COMENTARIOS ===");
         expandComments(page);
-
-        Locator comments = page.locator("div[role='article']");
-        int commentCount = comments.count();
-        System.out.println("  Comentarios encontrados en DOM: " + commentCount);
-
-        for (int i = 0; i < commentCount; i++) {
-            try {
-                Locator comment = comments.nth(i);
-                String text = comment.innerText();
-
-                if (text != null && text.length() > 3 && text.length() < 2000) {
-                    System.out.println("\n  --- Comentario " + (i + 1) + " ---");
-                    System.out.println("  " + text.replaceAll("\n", " | ").substring(0, Math.min(text.length(), 200)));
-
-                    // Buscar reacciones dentro del comentario
-                    Locator commentReactions = comment.locator("span[aria-label], div[aria-label]");
-                    for (int j = 0; j < commentReactions.count(); j++) {
-                        String reactionLabel = commentReactions.nth(j).getAttribute("aria-label");
-                        if (reactionLabel != null && reactionLabel.matches(".*\\d+.*")) {
-                            System.out.println("    Reacciones: " + reactionLabel);
-                        }
-                    }
-                }
-            } catch (Exception ignored) { }
-        }
+        printAllComments(page);
     }
 
-    // -------------------------------------------------------
-    // Click en "Ver más comentarios"
-    // -------------------------------------------------------
-    //corregir
+
     private void expandComments(Page page) {
         try {
-            // Buscar botón "Ver más comentarios" o "Ver X comentarios"
-            Locator moreBtn = page.locator(
-                    "div[role='button']:has-text('Ver más comentarios'), " +
-                            "div[role='button']:has-text('Ver comentarios'), " +
-                            "span:has-text('Ver más comentarios')"
-            );
-            if (moreBtn.count() > 0) {
-                moreBtn.first().click();
-                page.waitForTimeout(3000);
-                System.out.println("  >>> Click en 'Ver más comentarios'");
-            }
+            loadAllComments(page);
+            expandCommentReplies(page);
         } catch (Exception e) {
-            System.out.println("  (No hay botón de más comentarios)");
+            log.info("  (No hay botones de comentarios para expandir)");
         }
     }
+
+
+    private void loadAllComments(Page page) {
+        int maxClicks = 20;
+        int clicks = 0;
+
+        while (clicks < maxClicks) {
+            Locator moreBtn = page.locator(
+                    "div[role='button']:has-text('Ver más comentarios')"
+            );
+            if (moreBtn.count() == 0) break;
+
+            moreBtn.first().click();
+            log.info("  >>> Click #{} en 'Ver más comentarios'", ++clicks);
+            page.waitForTimeout(2500); // esperar que cargue el siguiente batch
+        }
+
+        log.info("  Total clicks 'Ver más': {}", clicks);
+    }
+
+    private void expandCommentReplies(Page page) {
+        Locator replyBtns = page.locator("div[role='button']:has-text('respuesta')");
+        int count = replyBtns.count();
+        log.info("  Botones 'Ver respuestas' encontrados: {}", count);
+
+        for (int i = 0; i < count; i++) {
+            clickReplyButton(replyBtns.nth(i));
+        }
+    }
+
+
+    private void clickReplyButton(Locator btn) {
+        try {
+            String text = btn.innerText().trim();
+
+            if (text.matches("Ver (las )?\\d+ respuesta(s)?")) {
+                btn.click();
+                log.info("  >>> Click en: {}", text);
+                btn.page().waitForTimeout(1500);
+            }
+        } catch (Exception ignored) { }
+    }
+
+
+    private void printAllComments(Page page) {
+        Locator comments = page.locator("div[role='article']");
+        int total = comments.count();
+        log.info("  Comentarios en DOM: {}", total);
+
+        for (int i = 0; i < total; i++) {
+            printSingleComment(comments.nth(i), i + 1);
+        }
+    }
+
+
+    private void printSingleComment(Locator comment, int index) {
+        try {
+            String author = extractCommentAuthor(comment);
+            String text   = extractCommentText(comment);
+            String time   = extractCommentTime(comment);
+            String reacts = extractCommentReactionCount(comment);
+
+            if (!isValidCommentText(text)) return;
+
+            log.info("\n  --- Comentario {} ---", index);
+            log.info("  Autor   : {}", author);
+            log.info("  Texto   : {}", truncate(text, 300));
+            log.info("  Tiempo  : {}", time);
+            log.info("  Reacciones: {}", reacts);
+
+        } catch (Exception ignored) { }
+    }
+
+// -------------------------------------------------------
+// Sub-selectores dentro de un comentario
+// -------------------------------------------------------
+
+    // El nombre del autor está en el primer <a> con role="link" dentro del artículo
+// Complejidad: 2
+    private String extractCommentAuthor(Locator comment) {
+        try {
+            // Facebook pone el nombre en un <a> con aria-label o simplemente texto
+            Locator authorLink = comment.locator("a[role='link']").first();
+            return authorLink.innerText().trim();
+        } catch (Exception e) {
+            return "(sin autor)";
+        }
+    }
+
+    // El texto real del comentario está en un <div dir="auto"> que NO sea el nombre
+// Complejidad: 2
+    private String extractCommentText(Locator comment) {
+        try {
+            // div[dir='auto'] dentro del comentario — el primero suele ser el texto
+            // Filtramos los que son solo espacios o muy cortos (fechas, etc.)
+            Locator textDivs = comment.locator("div[dir='auto']");
+            for (int i = 0; i < textDivs.count(); i++) {
+                String t = textDivs.nth(i).innerText().trim();
+                if (t.length() > 5) return t; // el primero válido es el texto
+            }
+            return "(sin texto)";
+        } catch (Exception e) {
+            return "(sin texto)";
+        }
+    }
+
+    // La fecha/hora relativa está en un <a> con href que contiene "comment_id"
+// Complejidad: 2
+    private String extractCommentTime(Locator comment) {
+        try {
+            Locator timeLink = comment.locator("a[href*='comment_id']").first();
+            return timeLink.innerText().trim();
+        } catch (Exception e) {
+            return "(sin fecha)";
+        }
+    }
+
+    // Las reacciones del comentario: número en un span aria-label con "reacci"
+// Complejidad: 2
+    private String extractCommentReactionCount(Locator comment) {
+        try {
+            // Facebook renderiza algo como aria-label="16 reacciones, mira quién..."
+            Locator reactionEl = comment.locator("span[aria-label*='reacci'], div[aria-label*='reacci']").first();
+            return reactionEl.getAttribute("aria-label");
+        } catch (Exception e) {
+            // Fallback: buscar span con solo número (ej: "16", "34")
+            return extractNumericReaction(comment);
+        }
+    }
+
+    // Complejidad: 3
+    private String extractNumericReaction(Locator comment) {
+        try {
+            Locator spans = comment.locator("span");
+            for (int i = 0; i < spans.count(); i++) {
+                String t = spans.nth(i).innerText().trim();
+                if (t.matches("^\\d+$")) return t + " reacciones";
+            }
+            return "0";
+        } catch (Exception e) {
+            return "0";
+        }
+    }
+
+// -------------------------------------------------------
+// Utilidades
+// -------------------------------------------------------
+
+    private boolean isValidCommentText(String text) {
+        return text != null && text.length() > 3;
+    }
+
+    private String truncate(String text, int max) {
+        return text.substring(0, Math.min(text.length(), max));
+    }
+
 
     // -------------------------------------------------------
     // Parsea los bodies Ajax capturados buscando datos clave
