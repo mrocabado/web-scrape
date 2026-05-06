@@ -24,7 +24,7 @@ public class Post_facebook {
         // 2. Navegar y limpiar UI
         page.navigate(url);
         page.waitForTimeout(4000);
-        trigger_face.removeDialogs(page); 
+        trigger_face.removeDialogs(page);
 
         extractMainContent(page);
 

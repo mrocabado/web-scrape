@@ -2,7 +2,6 @@ package com.mindwaresrl.service.scrape.strategy;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
-import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitUntilState;
 import com.mindwaresrl.common.Conversion;

@@ -1,4 +1,4 @@
-package com.mindwaresrl.model;
+package com.mindwaresrl.model.facebook;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
